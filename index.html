@@ -15,6 +15,15 @@
     
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 加入 Web App 相關 Meta 標籤 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="沖繩家族遊">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 指定 iOS 和 Android 桌面圖示為這張圖片 (請確保圖片已改名為 app-icon.png) -->
+    <link rel="apple-touch-icon" href="app-icon.png">
+    <link rel="icon" type="image/png" href="app-icon.png">
     
     <script>
         tailwind.config = {
@@ -87,6 +96,21 @@
     </style>
 </head>
 <body class="text-warmgray-text">
+
+    <!-- ==================== 加入主畫面提示框 ==================== -->
+    <div id="install-prompt" class="bg-gradient-to-r from-fuji to-fuji-dark text-white p-3 text-xs flex items-center justify-between shadow-md relative z-50 transition-all duration-300">
+        <div class="flex items-center gap-3 flex-1">
+            <!-- 顯示您提供的可愛圖片 (請確保圖片已改名為 app-icon.png) -->
+            <img src="app-icon.png" alt="App Icon" class="w-10 h-10 rounded-lg shadow-sm border border-white/30 object-cover">
+            <div>
+                <p class="font-bold text-sm mb-0.5">將行程表加入手機桌面！</p>
+                <p class="text-white/80 leading-tight">點擊瀏覽器底部的 <i class="fa-solid fa-arrow-up-from-bracket mx-1"></i> 或 <i class="fa-solid fa-ellipsis-vertical mx-1"></i>，選擇「加入主畫面」</p>
+            </div>
+        </div>
+        <button onclick="document.getElementById('install-prompt').style.display='none'" class="w-6 h-6 flex items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/30 ml-2 shrink-0">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
 
     <!-- ==================== Header ==================== -->
     <header class="bg-white px-5 py-6 rounded-b-3xl shadow-soft sticky top-0 z-40">
