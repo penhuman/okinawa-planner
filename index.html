@@ -2,47 +2,41 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>沖繩夏日自駕慢遊</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Zen Maru Gothic & M PLUS Rounded 1c -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沖繩島自駕自由行</title>
+    
+    <!-- 引入 Google Fonts: Zen Maru Gothic (日式圓潤字體) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- 引入 Font Awesome (圖示) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['"Zen Maru Gothic"', 'sans-serif'],
+                    },
                     colors: {
                         fuji: {
-                            light: '#b3d4ff',
-                            DEFAULT: '#4a90e2', // 富士藍
-                            dark: '#2c5282',
+                            DEFAULT: '#5C88C4', // 富士藍
+                            light: '#EBF2FA',
+                            dark: '#3A639B'
                         },
-                        snow: '#ffffff', // 雪白
                         warmgray: {
-                            light: '#f5f5f5',
-                            DEFAULT: '#e0e0e0', // 暖灰
-                            dark: '#9e9e9e',
-                        },
-                        coral: '#ff7f50', // 珊瑚色 (點綴)
-                        sand: '#f4a460',  // 沙色 (點綴)
-                    },
-                    fontFamily: {
-                        sans: ['"Zen Maru Gothic"', '"M PLUS Rounded 1c"', 'sans-serif'],
+                            DEFAULT: '#F5F4F0', // 暖灰背景
+                            text: '#5D5C5A'
+                        }
                     },
                     boxShadow: {
-                        'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
-                        'float': '0 -2px 10px rgba(0, 0, 0, 0.05)',
-                    },
-                    borderRadius: {
-                        'xl': '1rem',
-                        '2xl': '1.5rem',
-                        '3xl': '2rem',
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'float': '0 10px 25px -5px rgba(92, 136, 196, 0.2)',
                     }
                 }
             }
@@ -50,15 +44,16 @@
     </script>
     <style>
         body {
-            background-color: #f8fafc;
-            /* 可愛的海浪/雲朵背景紋理 */
-            background-image: radial-gradient(#b3d4ff 1px, transparent 1px);
-            background-size: 20px 20px;
-            color: #333;
-            -webkit-tap-highlight-color: transparent;
-            padding-bottom: 80px; /* 為底部導覽列留空間 */
+            background-color: #F5F4F0;
+            /* 模擬手機版型置中 (在桌面版時) */
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 90px; /* 預留底部導覽列空間 */
         }
-
+        
+        /* 隱藏滾動條但保持可滾動 */
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -76,724 +71,717 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .day-content {
-            display: none;
-            animation: slideIn 0.3s ease-out;
-        }
-        .day-content.active {
-            display: block;
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
         .tag {
-            font-size: 0.7rem;
-            padding: 0.15rem 0.5rem;
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
             border-radius: 9999px;
             font-weight: 700;
         }
-        .tag-food { background-color: #fef08a; color: #854d0e; }
-        .tag-activity { background-color: #bbf7d0; color: #166534; }
-        .tag-shopping { background-color: #fbcfe8; color: #9d174d; }
-        .tag-spot { background-color: #bfdbfe; color: #1e3a8a; }
-        .tag-hotel { background-color: #e9d5ff; color: #6b21a8; }
-        .tag-transport { background-color: #e5e7eb; color: #374151; }
-
-        .highlight-eat { background-color: #ffedd5; color: #c2410c; border: 1px solid #fdba74;}
-        .highlight-buy { background-color: #fce7f3; color: #be185d; border: 1px solid #f9a8d4;}
-        .highlight-photo { background-color: #dbeafe; color: #1d4ed8; border: 1px solid #93c5fd;}
-
-        /* 自訂 input file 按鈕樣式 */
-        input[type="file"] {
-            display: none;
-        }
-        .upload-btn {
-            display: inline-block;
-            cursor: pointer;
-        }
+        .tag-transport { background-color: #EBF2FA; color: #5C88C4; }
+        .tag-hotel { background-color: #FDF4E3; color: #D97706; }
+        .tag-car { background-color: #E6F4EA; color: #16A34A; }
     </style>
 </head>
-<body class="font-sans antialiased max-w-md mx-auto relative min-h-screen shadow-2xl bg-white overflow-x-hidden">
+<body class="text-warmgray-text">
 
-    <header class="bg-fuji text-snow rounded-b-3xl shadow-soft pt-12 pb-6 px-6 relative overflow-hidden z-10">
-        <div class="absolute -right-6 -top-6 text-fuji-light opacity-30 text-8xl">
-            <i class="fa-solid fa-sun"></i>
-        </div>
-        <div class="relative z-10 flex justify-between items-end">
+    <!-- ==================== Header ==================== -->
+    <header class="bg-white px-5 py-6 rounded-b-3xl shadow-soft sticky top-0 z-40">
+        <div class="flex justify-between items-center mb-2">
             <div>
-                <p class="text-fuji-light text-sm font-bold tracking-wider mb-1">OKINAWA ROAD TRIP</p>
-                <h1 class="text-3xl font-bold tracking-tight">沖繩夏日慢遊</h1>
-                <p class="text-sm mt-2 opacity-90"><i class="fa-regular fa-calendar-alt mr-1"></i> 2026/05/21 - 05/27</p>
+                <p class="text-xs text-gray-400 font-bold tracking-wider mb-1"><i class="fa-solid fa-plane text-fuji mr-1"></i>FAMILY TRIP</p>
+                <h1 class="text-2xl font-black text-gray-800">沖繩島自駕自由行</h1>
             </div>
-            <div class="bg-snow text-fuji w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform rotate-12">
-                <i class="fa-solid fa-car text-xl"></i>
+            <div class="w-12 h-12 bg-fuji-light rounded-full flex items-center justify-center text-fuji text-xl shadow-inner">
+                <i class="fa-solid fa-sun"></i>
             </div>
+        </div>
+        <div class="flex items-center text-sm font-bold text-fuji bg-fuji-light/50 inline-block px-3 py-1.5 rounded-xl">
+            <i class="fa-regular fa-calendar mr-2"></i> 2026/05/21 - 05/27
         </div>
     </header>
 
-    <main class="p-4">
+    <!-- ==================== 行程內容區 (Tab 1) ==================== -->
+    <main class="p-4" id="tab-itinerary" class="tab-content active">
         
-        <!-- ==================== 行程 (Itinerary) ==================== -->
-        <section id="tab-itinerary" class="tab-content active">
+        <!-- 天數導航 (橫向滑動) -->
+        <div class="flex overflow-x-auto hide-scrollbar gap-3 mb-6 pb-2 snap-x">
+            <button id="btn-day1" onclick="switchDay('day1')" class="day-btn active bg-fuji text-white shadow-md flex-shrink-0 px-4 py-2 rounded-2xl flex flex-col items-center transition-all snap-start">
+                <span class="text-xs font-bold mb-0.5">Day 1</span>
+                <span class="text-sm font-black text-fuji-light">5/21</span>
+            </button>
+            <button id="btn-day2" onclick="switchDay('day2')" class="day-btn bg-white text-gray-600 flex-shrink-0 px-4 py-2 rounded-2xl flex flex-col items-center transition-all snap-start shadow-sm border border-gray-100">
+                <span class="text-xs font-bold mb-0.5">Day 2</span>
+                <span class="text-sm font-black text-gray-400">5/22</span>
+            </button>
+            <button id="btn-day3" onclick="switchDay('day3')" class="day-btn bg-white text-gray-600 flex-shrink-0 px-4 py-2 rounded-2xl flex flex-col items-center transition-all snap-start shadow-sm border border-gray-100">
+                <span class="text-xs font-bold mb-0.5">Day 3</span>
+                <span class="text-sm font-black text-gray-400">5/23</span>
+            </button>
+            <button id="btn-day4" onclick="switchDay('day4')" class="day-btn bg-white text-gray-600 flex-shrink-0 px-4 py-2 rounded-2xl flex flex-col items-center transition-all snap-start shadow-sm border border-gray-100">
+                <span class="text-xs font-bold mb-0.5">Day 4</span>
+                <span class="text-sm font-black text-gray-400">5/24</span>
+            </button>
+            <button id="btn-day5" onclick="switchDay('day5')" class="day-btn bg-white text-gray-600 flex-shrink-0 px-4 py-2 rounded-2xl flex flex-col items-center transition-all snap-start shadow-sm border border-gray-100">
+                <span class="text-xs font-bold mb-0.5">Day 5</span>
+                <span class="text-sm font-black text-gray-400">5/25</span>
+            </button>
+            <button id="btn-day6" onclick="switchDay('day6')" class="day-btn bg-white text-gray-600 flex-shrink-0 px-4 py-2 rounded-2xl flex flex-col items-center transition-all snap-start shadow-sm border border-gray-100">
+                <span class="text-xs font-bold mb-0.5">Day 6</span>
+                <span class="text-sm font-black text-gray-400">5/26</span>
+            </button>
+            <button id="btn-day7" onclick="switchDay('day7')" class="day-btn bg-white text-gray-600 flex-shrink-0 px-4 py-2 rounded-2xl flex flex-col items-center transition-all snap-start shadow-sm border border-gray-100">
+                <span class="text-xs font-bold mb-0.5">Day 7</span>
+                <span class="text-sm font-black text-gray-400">5/27</span>
+            </button>
+        </div>
+
+        <!-- ===== Day 1 ===== -->
+        <div id="day1-content" class="day-content">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-plane-arrival text-fuji mr-2"></i>出發沖繩</h2>
+            </div>
+
+            <!-- 天氣提示卡 -->
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                <div class="text-2xl mt-1">⛅</div>
+                <div>
+                    <p class="text-sm font-bold text-blue-900">今日天氣與穿著 (26°/22°)</p>
+                    <p class="text-xs text-blue-800 mt-1">多雲時晴，氣候溫暖。建議穿著短袖或輕薄長袖，準備薄外套機上保暖。</p>
+                </div>
+            </div>
+
+            <!-- 航班卡片 -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-transport">去程航班</span>
+                        <span class="text-xs font-bold text-gray-500">12:00 - 14:40</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">台北 TPE ➔ 沖繩 OKA</h3>
+                    
+                    <div class="mt-3 bg-gray-50 rounded-xl p-3 border border-gray-100">
+                        <p class="text-sm font-bold text-fuji mb-2"><i class="fa-solid fa-plane mr-1"></i>星宇航空 JX870</p>
+                        <ul class="text-xs text-gray-600 space-y-1.5">
+                            <li><i class="fa-solid fa-check-circle text-green-500 w-4"></i> 狀態：準時</li>
+                            <li><i class="fa-solid fa-plane-up text-gray-400 w-4"></i> 機型：空中巴士 A330-900 (大型)</li>
+                            <li><i class="fa-solid fa-seat-airline text-gray-400 w-4"></i> 艙等：經濟艙</li>
+                            <li><i class="fa-solid fa-utensils text-gray-400 w-4"></i> 服務：提供餐膳</li>
+                            <li><i class="fa-regular fa-clock text-gray-400 w-4"></i> 航程：1小時40分</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 租車卡片 -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-car">租車取車</span>
+                        <span class="text-xs font-bold text-gray-500">15:30</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Sorasora 租車 (機場接送)</h3>
+                    
+                    <div class="bg-green-50 rounded-xl p-3 border border-green-100 mt-2">
+                        <div class="grid grid-cols-2 gap-2 text-xs text-green-800">
+                            <div><span class="font-bold">預約人：</span>鄭懷仁</div>
+                            <div><span class="font-bold">人數：</span>6大5小</div>
+                            <div class="col-span-2"><span class="font-bold">行李：</span>6個行李箱🧳</div>
+                            <div class="col-span-2 text-green-600 mt-1"><i class="fa-solid fa-circle-info mr-1"></i>抵達後請留意 Sorasora 接機人員</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 住宿卡片 -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-hotel">住宿 Check-in</span>
+                        <span class="text-xs font-bold text-gray-500">18:00</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 leading-tight">Aqua Palace Chatan<br><span class="text-sm font-normal text-gray-500">By Coldio Premium</span></h3>
+                    
+                    <div class="mt-3 bg-orange-50 rounded-xl p-3 border border-orange-100">
+                        <ul class="text-xs text-orange-800 space-y-1.5">
+                            <li><i class="fa-solid fa-bed w-4"></i> 房型：分租公寓 兩間</li>
+                            <li><i class="fa-solid fa-mug-hot w-4"></i> 方案：不含早</li>
+                            <li><i class="fa-solid fa-file-invoice w-4"></i> 平台：Booking</li>
+                        </ul>
+                        <button class="mt-2 w-full py-2 bg-white border border-orange-200 rounded-lg text-orange-600 font-bold shadow-sm">
+                            <i class="fa-solid fa-location-dot mr-1"></i> 導航至飯店
+                        </button>
+                    </div>
+                </div>
+            </div>
             
-            <div class="flex overflow-x-auto hide-scrollbar gap-3 py-2 mb-4 snap-x">
-                <button onclick="switchDay(1)" id="btn-day1" class="day-btn snap-start flex-shrink-0 bg-fuji text-snow px-5 py-3 rounded-2xl font-bold shadow-md transition-all">
-                    <span class="block text-xs font-normal opacity-80">5/21 (四)</span>
-                    Day 1
-                </button>
-                <button onclick="switchDay(2)" id="btn-day2" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
-                    <span class="block text-xs font-normal opacity-80">5/22 (五)</span>
-                    Day 2
-                </button>
-                <button onclick="switchDay(3)" id="btn-day3" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
-                    <span class="block text-xs font-normal opacity-80">5/23 (六)</span>
-                    Day 3
-                </button>
-                <button onclick="switchDay(4)" id="btn-day4" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
-                    <span class="block text-xs font-normal opacity-80">5/24 (日)</span>
-                    Day 4
-                </button>
-                <button onclick="switchDay(5)" id="btn-day5" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
-                    <span class="block text-xs font-normal opacity-80">5/25 (一)</span>
-                    Day 5
-                </button>
-                <button onclick="switchDay(6)" id="btn-day6" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
-                    <span class="block text-xs font-normal opacity-80">5/26 (二)</span>
-                    Day 6
-                </button>
-                <button onclick="switchDay(7)" id="btn-day7" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
-                    <span class="block text-xs font-normal opacity-80">5/27 (三)</span>
-                    Day 7
-                </button>
+            <div class="relative pl-6 ml-4">
+                <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="h-6"></div>
             </div>
+        </div>
 
-            <div id="day1-content" class="day-content active">
-                <div class="flex items-center justify-between mb-4 px-1">
-                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-plane-arrival text-fuji mr-2"></i>初抵那霸．啟程</h2>
-                </div>
-
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
-                    <div class="text-2xl mt-1">🌤️</div>
-                    <div>
-                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (28°/24°)</p>
-                        <p class="text-xs text-blue-800 mt-1">沖繩5月已漸熱，白天晴時多雲，建議穿著短袖透氣衣物。取車需準備駕照日文譯本及台灣駕照正本。</p>
-                    </div>
-                </div>
-
-                <!-- Day 1 Flight -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-transport">航班</span>
-                            <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full border border-green-200">
-                                <i class="fa-regular fa-circle-check mr-1"></i>準時
-                            </span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">台北 TPE ➔ 沖繩 OKA</h3>
-                        <p class="text-sm font-bold text-fuji mt-1">星宇航空 JX870 (12:00 - 14:40)</p>
-                        
-                        <div class="mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5">
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-location-dot text-gray-400 mt-0.5 w-3"></i>
-                                <span>TPE 桃園機場 T1 ➔ OKA 那霸機場 I</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-plane text-gray-400 mt-0.5 w-3"></i>
-                                <span>空中巴士 A330-900 (大型) · 經濟艙</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-utensils text-gray-400 mt-0.5 w-3"></i>
-                                <span>提供餐膳 · 飛行時間 1小時40分</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 1 Car Rental -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-transport">交通</span>
-                            <span class="text-xs font-bold text-gray-500">15:30</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Sorasora 租車 (機場接機)</h3>
-                        <p class="text-sm text-gray-600 mt-1">預約人：鄭懷仁。抵達機場後由專人接機。</p>
-                        
-                        <div class="mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200">
-                            <p class="text-xs text-gray-700 flex items-center gap-2 mb-1">
-                                <i class="fa-solid fa-users text-gray-500 w-4"></i>
-                                <span>6大5小，共 6 個行李箱🧳</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-center gap-2">
-                                <i class="fa-solid fa-gas-pump text-gray-500 w-4"></i>
-                                <span>取車時為滿油，還車前需加滿。</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 1 Hotel -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-hotel">住宿</span>
-                            <span class="text-xs font-bold text-gray-500">19:00</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Aqua Palace Chatan</h3>
-                        <p class="text-sm font-bold text-fuji mt-1">By Coldio Premium</p>
-                        <p class="text-sm text-gray-600 mt-1">抵達北谷町辦理入住。（連續入住兩晚 5/21-5/22）</p>
-                        
-                        <div class="mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5">
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型：分租公寓兩間</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-utensils text-gray-400 mt-0.5 w-3"></i>
-                                <span>餐食：不含早餐</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-mobile-screen-button text-gray-400 mt-0.5 w-3"></i>
-                                <span>訂房平台：Booking.com</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative pl-6 ml-4">
-                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="h-6"></div>
-                </div>
+        <!-- ===== Day 2 ===== -->
+        <div id="day2-content" class="day-content" style="display: none;">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-car text-fuji mr-2"></i>沖繩自駕漫遊</h2>
             </div>
-
-            <div id="day2-content" class="day-content">
-                <div class="flex items-center justify-between mb-4 px-1">
-                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-fish text-fuji mr-2"></i>海洋博公園與北部海岸</h2>
-                </div>
-
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
-                    <div class="text-2xl mt-1">⛅</div>
-                    <div>
-                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (29°/25°)</p>
-                        <p class="text-xs text-blue-800 mt-1">多雲時晴，紫外線偏強。多半為戶外及水族館行程，請注意防曬並穿著好走的休閒鞋。北部車程較長，注意油量。</p>
-                    </div>
-                </div>
-
-                <!-- Day 2 Spot (Example) -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-spot">景點</span>
-                            <span class="text-xs font-bold text-gray-500">10:00</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">美麗海水族館 (預設景點)</h3>
-                        <p class="text-sm text-gray-600 mt-1">帶小朋友看巨大鯨鯊，享受海洋世界！</p>
-                    </div>
-                </div>
-
-                <!-- Day 2 Hotel (連住) -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-hotel">住宿</span>
-                            <span class="text-xs font-bold text-fuji bg-fuji-light/20 px-2 py-0.5 rounded-full border border-fuji-light/50">
-                                <i class="fa-solid fa-bed mr-1"></i>連住第2晚
-                            </span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Aqua Palace Chatan</h3>
-                        <p class="text-sm font-bold text-fuji mt-1">By Coldio Premium</p>
-                        <p class="text-sm text-gray-600 mt-1">今晚為連住第二天，無需更換飯店，玩累了可以直接回房休息！</p>
-                        
-                        <div class="mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5">
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型：分租公寓兩間</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-utensils text-gray-400 mt-0.5 w-3"></i>
-                                <span>餐食：不含早餐</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative pl-6 ml-4">
-                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="h-6"></div>
-                </div>
-            </div>
-
-            <div id="day3-content" class="day-content">
-                <div class="flex items-center justify-between mb-4 px-1">
-                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-spa text-fuji mr-2"></i>北谷換宿與美國村</h2>
-                </div>
-
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
-                    <div class="text-2xl mt-1">🌧️</div>
-                    <div>
-                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (27°/24°)</p>
-                        <p class="text-xs text-blue-800 mt-1">降雨機率偏高，出門記得準備雨具。今日活動範圍主要在美國村周邊並更換飯店。</p>
-                    </div>
-                </div>
-
-                <!-- Day 3 Hotel -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-hotel">住宿</span>
-                            <span class="text-xs font-bold text-gray-500">15:00</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Lequ Okinawa Chatan</h3>
-                        <p class="text-sm font-bold text-fuji mt-1">Spa & Resort</p>
-                        <p class="text-sm text-gray-600 mt-1">辦理入住，享受美國村的高質感渡假飯店，飯店頂樓有絕美泳池與溫泉！</p>
-                        
-                        <div class="mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5">
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型A：單人雙床 (含早2人 / Klook)</span>
-                            </p>
-                            <div class="border-t border-gray-200 my-1.5"></div>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型B：三人房雙床+沙發床 (含早3人 / Agoda)</span>
-                            </p>
-                        </div>
-                        
-                        <div class="mt-3 flex gap-2 flex-wrap">
-                            <span class="tag highlight-photo text-[10px] px-2 py-1"><i class="fa-solid fa-camera mr-1"></i>無邊際泳池拍夕陽</span>
-                            <span class="tag highlight-buy text-[10px] px-2 py-1"><i class="fa-solid fa-bag-shopping mr-1"></i>美國村逛街</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative pl-6 ml-4">
-                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="h-6"></div>
-                </div>
-            </div>
-
-            <div id="day4-content" class="day-content">
-                <div class="flex items-center justify-between mb-4 px-1">
-                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-car-side text-fuji mr-2"></i>市區移動與還車</h2>
-                </div>
-
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
-                    <div class="text-2xl mt-1">⛅</div>
-                    <div>
-                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (28°/25°)</p>
-                        <p class="text-xs text-blue-800 mt-1">天氣多雲。今日結束自駕轉往那霸市區，後續將搭乘大眾運輸或步行，請穿著舒適好走的鞋子。</p>
-                    </div>
-                </div>
-
-                <!-- Day 4 Car Return -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-transport">交通</span>
-                            <span class="text-xs font-bold text-gray-500">16:00 前</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Sorasora 還車</h3>
-                        <p class="text-sm text-gray-600 mt-1">前往國際通前辦理還車手續。</p>
-                        
-                        <div class="mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200">
-                            <p class="text-xs text-gray-700 flex items-center gap-2 text-red-600 font-bold">
-                                <i class="fa-solid fa-gas-pump w-4"></i>
-                                <span>注意：還車前務必加滿油，並保留收據！</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 4 Hotel -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-hotel">住宿</span>
-                            <span class="text-xs font-bold text-gray-500">17:00</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Nest Hotel Naha Kumoji</h3>
-                        <p class="text-sm font-bold text-fuji mt-1">那霸久茂地巢飯店</p>
-                        <p class="text-sm text-gray-600 mt-1">還車後辦理入住 (連住兩晚 5/24-5/25)。位在國際通周邊，交通方便，晚上在市區逛街吃美食。</p>
-                        
-                        <div class="mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5">
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型A：4人房 x 1</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型B：豪華雙單床+沙發床 x 2</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-mobile-screen-button text-gray-400 mt-0.5 w-3"></i>
-                                <span>訂房平台：Trip.com</span>
-                            </p>
-                        </div>
-
-                        <div class="mt-3 flex gap-2 flex-wrap">
-                            <span class="tag highlight-eat text-[10px] px-2 py-1"><i class="fa-solid fa-utensils mr-1"></i>屋台村/暖暮拉麵</span>
-                            <span class="tag highlight-buy text-[10px] px-2 py-1"><i class="fa-solid fa-bag-shopping mr-1"></i>唐吉訶德採購</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative pl-6 ml-4">
-                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="h-6"></div>
-                </div>
-            </div>
-
-            <div id="day5-content" class="day-content">
-                <div class="flex items-center justify-between mb-4 px-1">
-                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-city text-fuji mr-2"></i>那霸市區漫遊</h2>
-                </div>
-
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
-                    <div class="text-2xl mt-1">☀️</div>
-                    <div>
-                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (30°/26°)</p>
-                        <p class="text-xs text-blue-800 mt-1">今日天氣晴朗炎熱。由於已經沒有租車，在市區移動請準備好遮陽傘、防曬乳與隨身水分補充。</p>
-                    </div>
-                </div>
-
-                <!-- Day 5 Hotel (連住) -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-hotel">住宿</span>
-                            <span class="text-xs font-bold text-fuji bg-fuji-light/20 px-2 py-0.5 rounded-full border border-fuji-light/50">
-                                <i class="fa-solid fa-bed mr-1"></i>連住第2晚
-                            </span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Nest Hotel Naha Kumoji</h3>
-                        <p class="text-sm font-bold text-fuji mt-1">那霸久茂地巢飯店</p>
-                        <p class="text-sm text-gray-600 mt-1">那霸市區連住第二晚，買好的伴手禮可以直接放回飯店繼續血拚！</p>
-                        
-                        <div class="mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5">
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型A：4人房 x 1</span>
-                            </p>
-                            <p class="text-xs text-gray-700 flex items-start gap-2">
-                                <i class="fa-solid fa-bed text-gray-400 mt-0.5 w-3"></i>
-                                <span>房型B：豪華雙單床+沙發床 x 2</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative pl-6 ml-4">
-                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="h-6"></div>
-                </div>
-            </div>
-
-            <div id="day6-content" class="day-content">
-                <div class="flex items-center justify-between mb-4 px-1">
-                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-train-subway text-fuji mr-2"></i>單軌電車之旅</h2>
-                </div>
-
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
-                    <div class="text-2xl mt-1">⛅</div>
-                    <div>
-                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (29°/25°)</p>
-                        <p class="text-xs text-blue-800 mt-1">多雲時晴，降雨機率20%。建議準備好單軌電車一日券，並穿著好走的運動鞋。</p>
-                    </div>
-                </div>
-
-                <!-- 預留行程空位 -->
-                <div class="bg-gray-50 border border-gray-200 border-dashed rounded-2xl p-6 text-center text-gray-400 mt-4 shadow-sm">
-                    <i class="fa-solid fa-map-location-dot text-3xl mb-2"></i>
-                    <p class="text-sm font-bold mt-1">尚未安排行程與住宿</p>
-                    <p class="text-xs mt-1">可隨時擴充行程景點</p>
-                </div>
-
-                <div class="relative pl-6 ml-4 mt-6">
-                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="h-6"></div>
-                </div>
-            </div>
-
-            <div id="day7-content" class="day-content">
-                <div class="flex items-center justify-between mb-4 px-1">
-                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-plane-departure text-fuji mr-2"></i>滿載而歸</h2>
-                </div>
-
-                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
-                    <div class="text-2xl mt-1">🌦️</div>
-                    <div>
-                        <p class="text-sm font-bold text-blue-900">今日天氣與提示 (28°/24°)</p>
-                        <p class="text-xs text-blue-800 mt-1">多雲時陰短暫雨。今日準備搭機返台，請預留充足時間前往機場，並確認免稅品是否皆已打包妥當。</p>
-                    </div>
-                </div>
-
-                <!-- Day 7 Flight -->
-                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
-                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="tag tag-transport">航班</span>
-                            <span class="text-xs font-bold text-gray-500">15:50 - 16:25</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">沖繩 OKA ➔ 台北 TPE</h3>
-                        <p class="text-sm font-bold text-fuji mt-1">星宇航空 JX871</p>
-                        <p class="text-sm text-gray-600 mt-1">飛行時間約 1小時35分。建議於 13:50 前抵達那霸機場 (OKA) 第一航廈報到。</p>
-                        <div class="mt-3 flex gap-2 flex-wrap">
-                            <span class="tag highlight-buy text-[10px] px-2 py-1"><i class="fa-solid fa-bag-shopping mr-1"></i>機場免稅店最後採購伴手禮</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative pl-6 ml-4">
-                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
-                    <div class="h-6"></div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- ==================== 指南 (Guides) ==================== -->
-        <section id="tab-guide" class="tab-content">
-            <h2 class="text-xl font-bold text-gray-800 mb-4 px-1"><i class="fa-solid fa-book-open text-fuji mr-2"></i>自駕指南</h2>
             
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
-                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
-                        <i class="fa-solid fa-car-side"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-sm">交通規則</h3>
-                    <p class="text-xs text-gray-500 mt-1">靠左行駛須知</p>
-                </div>
-                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
-                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
-                        <i class="fa-solid fa-gas-pump"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-sm">加油教學</h3>
-                    <p class="text-xs text-gray-500 mt-1">自助加油步驟</p>
-                </div>
-                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
-                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
-                        <i class="fa-solid fa-phone-volume"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-sm">緊急聯絡</h3>
-                    <p class="text-xs text-gray-500 mt-1">事故處理流程</p>
-                </div>
-                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
-                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
-                        <i class="fa-solid fa-yen-sign"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-sm">高速收費</h3>
-                    <p class="text-xs text-gray-500 mt-1">ETC與現金車道</p>
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                <div class="text-2xl mt-1">☀️</div>
+                <div>
+                    <p class="text-sm font-bold text-blue-900">今日天氣與穿著 (27°/23°)</p>
+                    <p class="text-xs text-blue-800 mt-1">晴朗好天氣！請注意防曬，記得攜帶太陽眼鏡與防曬乳，保持水分補充。</p>
                 </div>
             </div>
-        </section>
 
-        <!-- ==================== 天氣 (Weather) ==================== -->
-        <section id="tab-weather" class="tab-content">
-            <h2 class="text-xl font-bold text-gray-800 mb-4 px-1"><i class="fa-solid fa-cloud-sun text-fuji mr-2"></i>沖繩天氣預報</h2>
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100 text-center py-8">
+                    <p class="text-gray-400 text-sm"><i class="fa-solid fa-map-location-dot text-2xl mb-2 block opacity-50"></i>行程規劃中，隨時出發！</p>
+                </div>
+            </div>
+
+            <!-- 住宿卡片 (連住) -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-hotel">住宿 (連住)</span>
+                        <span class="text-xs font-bold text-gray-500">Night</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 leading-tight">Aqua Palace Chatan<br><span class="text-sm font-normal text-gray-500">By Coldio Premium</span></h3>
+                    <div class="mt-2 inline-block bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded font-bold">
+                        <i class="fa-solid fa-moon mr-1"></i>連住第 2 晚，免換飯店！
+                    </div>
+                </div>
+            </div>
             
-            <div class="bg-gradient-to-br from-fuji-light to-fuji text-white p-6 rounded-3xl shadow-md mb-6 relative overflow-hidden">
-                <i class="fa-solid fa-sun absolute -right-4 -top-4 text-7xl opacity-20"></i>
-                <div class="flex justify-between items-center relative z-10">
-                    <div>
-                        <p class="text-sm opacity-90 mb-1">5/21 抵達首日</p>
-                        <h3 class="text-5xl font-bold font-sans">28°</h3>
-                        <p class="text-sm mt-2 opacity-90">晴時多雲 · 降雨機率 20%</p>
-                    </div>
-                    <div class="text-6xl text-yellow-300 drop-shadow-md">
-                        <i class="fa-solid fa-cloud-sun"></i>
-                    </div>
+            <div class="relative pl-6 ml-4">
+                <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="h-6"></div>
+            </div>
+        </div>
+
+        <!-- ===== Day 3 ===== -->
+        <div id="day3-content" class="day-content" style="display: none;">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-suitcase-rolling text-fuji mr-2"></i>前進美國村</h2>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                <div class="text-2xl mt-1">🌧️</div>
+                <div>
+                    <p class="text-sm font-bold text-blue-900">今日天氣與穿著 (28°/24°)</p>
+                    <p class="text-xs text-blue-800 mt-1">偶有陣雨。建議攜帶雨具，或安排室內購物行程，開車請注意路面濕滑。</p>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-soft border border-gray-100 p-4 mb-6">
-                <h3 class="text-sm font-bold text-gray-700 mb-3 border-b border-gray-100 pb-2">旅程預測 (5/21 - 5/27)</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="w-16 text-gray-700 font-medium">5/21(四)</span>
-                        <div class="flex items-center w-12 justify-center">
-                            <i class="fa-solid fa-cloud-sun text-yellow-500 text-lg"></i>
-                        </div>
-                        <div class="w-20 text-center text-xs text-gray-500">降雨 20%</div>
-                        <div class="w-24 text-right">
-                            <span class="font-bold text-gray-800">28°</span>
-                            <span class="text-gray-400 mx-1">/</span>
-                            <span class="text-gray-500">24°</span>
-                        </div>
+            <!-- 住宿卡片 (換宿) -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-hotel">住宿 Check-in</span>
+                        <span class="text-xs font-bold text-gray-500">15:00 後</span>
                     </div>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="w-16 text-gray-700 font-medium">5/22(五)</span>
-                        <div class="flex items-center w-12 justify-center">
-                            <i class="fa-solid fa-cloud text-gray-400 text-lg"></i>
+                    <h3 class="text-lg font-bold text-gray-800 leading-tight mb-2">Lequ Okinawa Chatan Spa & Resort</h3>
+                    
+                    <div class="space-y-2">
+                        <div class="bg-orange-50 rounded-xl p-3 border border-orange-100">
+                            <p class="text-xs font-bold text-orange-900 mb-1 border-b border-orange-200 pb-1">訂單 1 (Klook)</p>
+                            <ul class="text-xs text-orange-800 space-y-1">
+                                <li><i class="fa-solid fa-bed w-4"></i> 房型：單人雙床</li>
+                                <li><i class="fa-solid fa-utensils w-4"></i> 方案：含早 (2人)</li>
+                            </ul>
                         </div>
-                        <div class="w-20 text-center text-xs text-gray-500">降雨 30%</div>
-                        <div class="w-24 text-right">
-                            <span class="font-bold text-gray-800">29°</span>
-                            <span class="text-gray-400 mx-1">/</span>
-                            <span class="text-gray-500">25°</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="w-16 text-gray-700 font-medium">5/23(六)</span>
-                        <div class="flex items-center w-12 justify-center">
-                            <i class="fa-solid fa-cloud-showers-heavy text-fuji text-lg"></i>
-                        </div>
-                        <div class="w-20 text-center text-xs text-fuji font-medium">降雨 60%</div>
-                        <div class="w-24 text-right">
-                            <span class="font-bold text-gray-800">27°</span>
-                            <span class="text-gray-400 mx-1">/</span>
-                            <span class="text-gray-500">24°</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="w-16 text-gray-700 font-medium">5/24(日)</span>
-                        <div class="flex items-center w-12 justify-center">
-                            <i class="fa-solid fa-cloud-sun text-yellow-500 text-lg"></i>
-                        </div>
-                        <div class="w-20 text-center text-xs text-gray-500">降雨 20%</div>
-                        <div class="w-24 text-right">
-                            <span class="font-bold text-gray-800">28°</span>
-                            <span class="text-gray-400 mx-1">/</span>
-                            <span class="text-gray-500">25°</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="w-16 text-gray-700 font-medium">5/25(一)</span>
-                        <div class="flex items-center w-12 justify-center">
-                            <i class="fa-solid fa-sun text-red-400 text-lg"></i>
-                        </div>
-                        <div class="w-20 text-center text-xs text-gray-500">降雨 10%</div>
-                        <div class="w-24 text-right">
-                            <span class="font-bold text-gray-800">30°</span>
-                            <span class="text-gray-400 mx-1">/</span>
-                            <span class="text-gray-500">26°</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="w-16 text-gray-700 font-medium">5/26(二)</span>
-                        <div class="flex items-center w-12 justify-center">
-                            <i class="fa-solid fa-cloud-sun text-yellow-500 text-lg"></i>
-                        </div>
-                        <div class="w-20 text-center text-xs text-gray-500">降雨 20%</div>
-                        <div class="w-24 text-right">
-                            <span class="font-bold text-gray-800">29°</span>
-                            <span class="text-gray-400 mx-1">/</span>
-                            <span class="text-gray-500">25°</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center text-sm">
-                        <span class="w-16 text-gray-700 font-medium">5/27(三)</span>
-                        <div class="flex items-center w-12 justify-center">
-                            <i class="fa-solid fa-cloud-meatball text-gray-400 text-lg"></i>
-                        </div>
-                        <div class="w-20 text-center text-xs text-gray-500">降雨 40%</div>
-                        <div class="w-24 text-right">
-                            <span class="font-bold text-gray-800">28°</span>
-                            <span class="text-gray-400 mx-1">/</span>
-                            <span class="text-gray-500">24°</span>
+                        <div class="bg-orange-50 rounded-xl p-3 border border-orange-100">
+                            <p class="text-xs font-bold text-orange-900 mb-1 border-b border-orange-200 pb-1">訂單 2 (Agoda)</p>
+                            <ul class="text-xs text-orange-800 space-y-1">
+                                <li><i class="fa-solid fa-bed w-4"></i> 房型：三人房雙床+沙發床</li>
+                                <li><i class="fa-solid fa-utensils w-4"></i> 方案：含早 (3人)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="bg-blue-50 border border-blue-100 p-4 rounded-2xl shadow-sm">
-                <h4 class="text-sm font-bold text-blue-900 mb-1"><i class="fa-solid fa-circle-info mr-1"></i> 初夏氣候小提醒</h4>
-                <p class="text-xs text-blue-800 leading-relaxed">
-                    5 月下旬的沖繩已經相當溫暖，高溫可達將近 30 度。但由於逐漸進入梅雨季節，天氣變化較快，建議除了準備透氣的夏季衣物、太陽眼鏡與防曬乳外，車上也可隨時備著幾把輕便雨傘以防偶陣雨。
-                </p>
+            <div class="relative pl-6 ml-4">
+                <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="h-6"></div>
             </div>
-        </section>
+        </div>
 
+        <!-- ===== Day 4 ===== -->
+        <div id="day4-content" class="day-content" style="display: none;">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-city text-fuji mr-2"></i>那霸市區巡禮</h2>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                <div class="text-2xl mt-1">⛅</div>
+                <div>
+                    <p class="text-sm font-bold text-blue-900">今日天氣與穿著 (28°/24°)</p>
+                    <p class="text-xs text-blue-800 mt-1">多雲。今日要還車轉往那霸市區，準備一雙好走的鞋子逛國際通吧！</p>
+                </div>
+            </div>
+
+            <!-- 還車卡片 -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-car">還車作業</span>
+                        <span class="text-xs font-bold text-gray-500">大約 16:00 前</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">歸還 Sorasora 租車</h3>
+                    <p class="text-sm text-gray-600">還車後前往國際通附近住宿。</p>
+                    <div class="mt-3 inline-block bg-red-50 text-red-600 text-xs px-2 py-1 rounded font-bold border border-red-100">
+                        <i class="fa-solid fa-gas-pump mr-1"></i>還車前請記得加滿油！
+                    </div>
+                </div>
+            </div>
+
+            <!-- 住宿卡片 (換宿) -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-hotel">住宿 Check-in</span>
+                        <span class="text-xs font-bold text-gray-500">傍晚</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 leading-tight mb-2">Nest Hotel Naha Kumoji<br><span class="text-sm font-normal text-gray-500">那霸久茂地巢飯店</span></h3>
+                    
+                    <div class="bg-orange-50 rounded-xl p-3 border border-orange-100">
+                        <ul class="text-xs text-orange-800 space-y-1.5">
+                            <li><i class="fa-solid fa-bed w-4"></i> 房型 A：4人房 x 1間</li>
+                            <li><i class="fa-solid fa-bed w-4"></i> 房型 B：豪華雙單床+沙發床 x 2間</li>
+                            <li><i class="fa-solid fa-file-invoice w-4"></i> 平台：Trip</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative pl-6 ml-4">
+                <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="h-6"></div>
+            </div>
+        </div>
+
+        <!-- ===== Day 5 ===== -->
+        <div id="day5-content" class="day-content" style="display: none;">
+             <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-train-subway text-fuji mr-2"></i>市區自由行</h2>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                <div class="text-2xl mt-1">☀️</div>
+                <div>
+                    <p class="text-sm font-bold text-blue-900">今日天氣與穿著 (29°/25°)</p>
+                    <p class="text-xs text-blue-800 mt-1">氣溫升高，日照強烈。市區步行請撐陽傘或戴帽子，隨時補充水分。</p>
+                </div>
+            </div>
+
+            <!-- 住宿卡片 (連住) -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-hotel">住宿 (連住)</span>
+                        <span class="text-xs font-bold text-gray-500">Night</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 leading-tight">Nest Hotel Naha Kumoji<br><span class="text-sm font-normal text-gray-500">那霸久茂地巢飯店</span></h3>
+                    <div class="mt-2 inline-block bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded font-bold">
+                        <i class="fa-solid fa-moon mr-1"></i>連住第 2 晚，免換飯店！
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative pl-6 ml-4">
+                <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="h-6"></div>
+            </div>
+        </div>
+
+        <!-- ===== Day 6 ===== -->
+        <div id="day6-content" class="day-content" style="display: none;">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-shopping-bag text-fuji mr-2"></i>最後採購日</h2>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                <div class="text-2xl mt-1">⛅</div>
+                <div>
+                    <p class="text-sm font-bold text-blue-900">今日天氣與穿著 (29°/26°)</p>
+                    <p class="text-xs text-blue-800 mt-1">多雲時晴，天氣悶熱。建議穿著透氣材質衣物，採買伴手禮記得帶上購物袋！</p>
+                </div>
+            </div>
+
+             <!-- 住宿卡片 (最後一晚換宿) -->
+             <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-hotel">最後一晚住宿</span>
+                        <span class="text-xs font-bold text-gray-500">15:00 後</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 leading-tight mb-2">Hewitt Resort Naha<br><span class="text-sm font-normal text-gray-500">那霸休伊特渡假飯店</span></h3>
+                    
+                    <div class="mt-2 flex gap-2 flex-wrap">
+                        <span class="bg-blue-50 text-blue-600 text-[10px] px-2 py-1 rounded border border-blue-100"><i class="fa-solid fa-water mr-1"></i>頂樓無邊際泳池</span>
+                        <span class="bg-orange-50 text-orange-600 text-[10px] px-2 py-1 rounded border border-orange-100"><i class="fa-solid fa-hamburger mr-1"></i>隔日自製漢堡早餐</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative pl-6 ml-4">
+                <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="h-6"></div>
+            </div>
+        </div>
+
+        <!-- ===== Day 7 ===== -->
+        <div id="day7-content" class="day-content" style="display: none;">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-plane-departure text-fuji mr-2"></i>滿載而歸</h2>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                <div class="text-2xl mt-1">🌧️</div>
+                <div>
+                    <p class="text-sm font-bold text-blue-900">今日天氣與提示 (28°/24°)</p>
+                    <p class="text-xs text-blue-800 mt-1">短暫陣雨。準備搭機返台，請確認免稅品是否皆已打包妥當，並預留時間搭車前往機場。</p>
+                </div>
+            </div>
+
+            <!-- 航班卡片 -->
+            <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="tag tag-transport">回程航班</span>
+                        <span class="text-xs font-bold text-gray-500">15:50 - 16:25</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">沖繩 OKA ➔ 台北 TPE</h3>
+                    
+                    <div class="mt-3 bg-gray-50 rounded-xl p-3 border border-gray-100">
+                        <p class="text-sm font-bold text-fuji mb-1"><i class="fa-solid fa-plane mr-1"></i>星宇航空 JX871</p>
+                        <p class="text-xs text-gray-600 mt-2"><i class="fa-solid fa-clock text-orange-400 mr-1"></i>建議於 <span class="font-bold text-orange-600">13:50</span> 前抵達那霸機場 (OKA) 第一航廈報到。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative pl-6 ml-4">
+                <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                <div class="h-6"></div>
+            </div>
+        </div>
     </main>
 
-    <nav class="fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md shadow-float rounded-2xl flex justify-around p-3 z-50 border border-gray-100">
-        <button onclick="switchTab('itinerary')" id="nav-itinerary" class="nav-btn flex flex-col items-center text-fuji transition-colors">
-            <div class="bg-fuji-light/30 w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator">
+    <!-- ==================== 匯率計算機 (Tab 2) ==================== -->
+    <main class="p-4 tab-content" id="tab-calculator">
+        <h2 class="text-xl font-bold text-gray-800 mb-4 px-1"><i class="fa-solid fa-calculator text-fuji mr-2"></i>外匯計算機</h2>
+        
+        <div class="bg-white rounded-3xl shadow-soft border border-gray-100 p-5 overflow-hidden relative">
+            <!-- 裝飾背景圖案 -->
+            <div class="absolute -right-10 -bottom-10 text-fuji-light opacity-30 text-9xl">
+                <i class="fa-solid fa-yen-sign"></i>
+            </div>
+            
+            <div class="relative z-10">
+                <!-- 匯率設定 -->
+                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-2xl border border-gray-200 mb-5">
+                    <span class="text-sm font-bold text-gray-600"><i class="fa-solid fa-chart-line mr-2"></i>目前匯率設定</span>
+                    <div class="flex items-center bg-white px-3 py-1.5 rounded-xl border border-gray-300 shadow-sm">
+                        <span class="text-xs text-gray-500 mr-2">1 JPY =</span>
+                        <input type="number" id="exchange-rate" value="0.21" step="0.001" class="w-16 text-sm font-bold text-fuji focus:outline-none bg-transparent">
+                        <span class="text-xs text-gray-500 ml-1">TWD</span>
+                    </div>
+                </div>
+
+                <!-- 輸入區 -->
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-gray-500 mb-1 ml-1" id="calc-input-label">輸入日幣 (JPY)</label>
+                    <div class="relative">
+                        <input type="number" id="calc-amount" placeholder="0" class="w-full bg-white border-2 border-gray-200 rounded-2xl py-4 px-5 text-2xl font-bold text-gray-800 focus:border-fuji focus:ring-0 transition-colors shadow-inner" oninput="calculateExchange()">
+                        <button onclick="document.getElementById('calc-amount').value=''; calculateExchange();" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-gray-500">
+                            <i class="fa-solid fa-circle-xmark text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 轉換方向切換 -->
+                <div class="flex justify-center mb-4">
+                    <button onclick="toggleDirection()" class="bg-fuji-light/50 text-fuji w-10 h-10 rounded-full flex items-center justify-center hover:bg-fuji hover:text-white transition-colors shadow-sm cursor-pointer border border-fuji/20 relative z-20">
+                        <i id="calc-direction-icon" class="fa-solid fa-arrow-down-up-across-line text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- 輸出結果 -->
+                <div class="bg-gradient-to-br from-fuji to-fuji-dark text-white p-5 rounded-2xl shadow-md flex items-center justify-between">
+                    <div>
+                        <span id="calc-result-label" class="block text-xs font-medium text-fuji-light mb-1">約合新台幣 (TWD)</span>
+                        <div class="text-3xl font-bold font-sans tracking-tight">
+                            <span id="calc-result-symbol">NT$</span>
+                            <span id="calc-result">0</span>
+                        </div>
+                    </div>
+                    <div class="text-4xl opacity-80">
+                        <i id="calc-result-icon" class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-orange-50 border border-orange-100 p-4 rounded-2xl shadow-sm mt-4 flex items-start gap-3">
+            <i class="fa-solid fa-lightbulb text-orange-500 mt-0.5 text-lg"></i>
+            <p class="text-xs text-orange-800 leading-relaxed">
+                <strong class="block mb-1">購物秒換算秘訣</strong>
+                在唐吉訶德或藥妝店看到標價，直接輸入就能換算台幣！您可以隨時在上方修改匯率為您信用卡或實際換匯的數字。
+            </p>
+        </div>
+    </main>
+
+    <!-- ==================== 天氣資訊 (Tab 3) ==================== -->
+    <main class="p-4 tab-content" id="tab-weather">
+        <h2 class="text-xl font-bold text-gray-800 mb-4 px-1"><i class="fa-solid fa-cloud-sun text-fuji mr-2"></i>沖繩七日天氣預報</h2>
+        
+        <div class="bg-white rounded-3xl shadow-soft border border-gray-100 p-4 mb-4">
+            <div class="space-y-4">
+                <!-- Weather Items -->
+                <div class="flex items-center justify-between border-b border-gray-50 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 text-center"><span class="font-bold text-gray-700">5/21</span><br><span class="text-[10px] text-gray-400">週四</span></div>
+                        <div class="text-2xl">⛅</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-gray-800">26° / 22°</div>
+                        <div class="text-[10px] text-gray-400">降雨機率 20%</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between border-b border-gray-50 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 text-center"><span class="font-bold text-gray-700">5/22</span><br><span class="text-[10px] text-gray-400">週五</span></div>
+                        <div class="text-2xl">☀️</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-gray-800">27° / 23°</div>
+                        <div class="text-[10px] text-gray-400">降雨機率 10%</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between border-b border-gray-50 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 text-center"><span class="font-bold text-gray-700">5/23</span><br><span class="text-[10px] text-gray-400">週六</span></div>
+                        <div class="text-2xl">🌧️</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-gray-800">28° / 24°</div>
+                        <div class="text-[10px] text-blue-500 font-bold">降雨機率 60%</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between border-b border-gray-50 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 text-center"><span class="font-bold text-gray-700">5/24</span><br><span class="text-[10px] text-gray-400">週日</span></div>
+                        <div class="text-2xl">⛅</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-gray-800">28° / 24°</div>
+                        <div class="text-[10px] text-gray-400">降雨機率 30%</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between border-b border-gray-50 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 text-center"><span class="font-bold text-gray-700">5/25</span><br><span class="text-[10px] text-gray-400">週一</span></div>
+                        <div class="text-2xl">☀️</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-gray-800">29° / 25°</div>
+                        <div class="text-[10px] text-gray-400">降雨機率 10%</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between border-b border-gray-50 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 text-center"><span class="font-bold text-gray-700">5/26</span><br><span class="text-[10px] text-gray-400">週二</span></div>
+                        <div class="text-2xl">⛅</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-gray-800">29° / 26°</div>
+                        <div class="text-[10px] text-gray-400">降雨機率 20%</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 text-center"><span class="font-bold text-gray-700">5/27</span><br><span class="text-[10px] text-gray-400">週三</span></div>
+                        <div class="text-2xl">🌧️</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-gray-800">28° / 24°</div>
+                        <div class="text-[10px] text-blue-500 font-bold">降雨機率 50%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-blue-50 border border-blue-100 p-4 rounded-2xl shadow-sm">
+            <h3 class="text-sm font-bold text-blue-900 mb-2"><i class="fa-solid fa-umbrella text-blue-500 mr-2"></i>梅雨季穿著提醒</h3>
+            <p class="text-xs text-blue-800 leading-relaxed">
+                5 月下旬的沖繩已經相當溫暖，高溫可達將近 30 度。但由於逐漸進入梅雨季節，天氣變化較快，建議除了準備透氣的夏季衣物、太陽眼鏡與防曬乳外，車上也可隨時備著幾把輕便雨傘以防偶陣雨。
+            </p>
+        </div>
+    </main>
+
+    <!-- ==================== 底部導覽列 ==================== -->
+    <nav class="fixed bottom-4 left-4 right-4 max-w-[448px] mx-auto bg-white/95 backdrop-blur-md shadow-float rounded-3xl flex justify-around p-2 z-50 border border-gray-100">
+        <button onclick="switchTab('itinerary')" id="nav-itinerary" class="nav-btn w-full py-2 flex flex-col items-center text-fuji transition-colors relative">
+            <div class="bg-fuji-light/50 w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator transition-all">
                 <i class="fa-solid fa-map-location-dot text-lg"></i>
             </div>
             <span class="text-[10px] font-bold">行程</span>
         </button>
-        <button onclick="switchTab('guide')" id="nav-guide" class="nav-btn flex flex-col items-center text-gray-400 hover:text-fuji transition-colors">
-            <div class="w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator">
-                <i class="fa-regular fa-compass text-lg"></i>
+        <button onclick="switchTab('calculator')" id="nav-calculator" class="nav-btn w-full py-2 flex flex-col items-center text-gray-400 hover:text-fuji transition-colors relative">
+            <div class="w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator transition-all">
+                <i class="fa-solid fa-calculator text-lg"></i>
             </div>
-            <span class="text-[10px] font-bold">指南</span>
+            <span class="text-[10px] font-bold">匯率</span>
         </button>
-        <button onclick="switchTab('weather')" id="nav-weather" class="nav-btn flex flex-col items-center text-gray-400 hover:text-fuji transition-colors">
-            <div class="w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator">
+        <button onclick="switchTab('weather')" id="nav-weather" class="nav-btn w-full py-2 flex flex-col items-center text-gray-400 hover:text-fuji transition-colors relative">
+            <div class="w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator transition-all">
                 <i class="fa-solid fa-cloud-sun text-lg"></i>
             </div>
             <span class="text-[10px] font-bold">天氣</span>
         </button>
     </nav>
 
+    <!-- ==================== JavaScript 邏輯 ==================== -->
     <script>
-        // 切換主選單 (Tabs)
-        function switchTab(tabId) {
-            // 隱藏所有 tab 內容
-            document.querySelectorAll('.tab-content').forEach(el => {
-                el.classList.remove('active');
-            });
-            // 顯示選中的 tab 內容
-            document.getElementById('tab-' + tabId).classList.add('active');
+        // --- 匯率計算機邏輯 ---
+        let isJpyToTwd = true; // 預設為日幣轉台幣
 
-            // 更新底部導覽列樣式
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('text-fuji');
-                btn.classList.add('text-gray-400');
-                btn.querySelector('.nav-indicator').classList.remove('bg-fuji-light/30');
-            });
-
-            const activeBtn = document.getElementById('nav-' + tabId);
-            activeBtn.classList.remove('text-gray-400');
-            activeBtn.classList.add('text-fuji');
-            activeBtn.querySelector('.nav-indicator').classList.add('bg-fuji-light/30');
+        function toggleDirection() {
+            isJpyToTwd = !isJpyToTwd;
+            
+            const label = document.getElementById('calc-result-label');
+            const symbol = document.getElementById('calc-result-symbol');
+            const icon = document.getElementById('calc-result-icon');
+            const inputField = document.getElementById('calc-amount');
+            const inputLabel = document.getElementById('calc-input-label');
+            
+            if (isJpyToTwd) {
+                label.innerText = '約合新台幣 (TWD)';
+                symbol.innerText = 'NT$';
+                icon.className = 'fa-solid fa-money-bill-wave';
+                inputLabel.innerText = '輸入日幣 (JPY)';
+                inputField.placeholder = '0';
+            } else {
+                label.innerText = '可兌換日幣 (JPY)';
+                symbol.innerText = '¥';
+                icon.className = 'fa-solid fa-coins';
+                inputLabel.innerText = '輸入台幣 (TWD)';
+                inputField.placeholder = '0';
+            }
+            
+            // 旋轉動畫
+            const iconBtn = document.getElementById('calc-direction-icon');
+            iconBtn.classList.add('fa-spin', 'fa-spin-reverse');
+            setTimeout(() => iconBtn.classList.remove('fa-spin', 'fa-spin-reverse'), 300);
+            
+            calculateExchange();
         }
 
-        // 切換天數行程 (Days)
-        function switchDay(day) {
-            // 隱藏所有 day 內容
-            document.querySelectorAll('.day-content').forEach(el => {
-                el.classList.remove('active');
-            });
+        function calculateExchange() {
+            const amountStr = document.getElementById('calc-amount').value;
+            const rateStr = document.getElementById('exchange-rate').value;
+            const resultEl = document.getElementById('calc-result');
             
-            const targetContent = document.getElementById(`day${day}-content`);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            } else {
-                console.log(`Day ${day} 的行程尚未安排`);
+            if (!amountStr || !rateStr) {
+                resultEl.innerText = '0';
                 return;
             }
 
-            // 更新按鈕樣式
-            document.querySelectorAll('.day-btn').forEach(btn => {
-                btn.classList.remove('bg-fuji', 'text-snow', 'shadow-md');
-                btn.classList.add('bg-white', 'text-gray-500', 'border', 'border-gray-200');
+            const amount = parseFloat(amountStr);
+            const rate = parseFloat(rateStr);
+            let result = 0;
+            
+            if (isJpyToTwd) {
+                result = amount * rate;
+            } else {
+                result = amount / rate;
+            }
+            
+            resultEl.innerText = result.toLocaleString('en-US', { maximumFractionDigits: 0 });
+        }
+
+        // --- 切換下方 Tab 邏輯 ---
+        function switchTab(tabId) {
+            // 隱藏所有 tab
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // 顯示目標 tab
+            document.getElementById('tab-' + tabId).classList.add('active');
+
+            // 重置按鈕樣式
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('text-fuji');
+                btn.classList.add('text-gray-400');
+                btn.querySelector('.nav-indicator').classList.remove('bg-fuji-light/50');
             });
 
-            const activeBtn = document.getElementById('btn-day' + day);
-            activeBtn.classList.remove('bg-white', 'text-gray-500', 'border', 'border-gray-200');
-            activeBtn.classList.add('bg-fuji', 'text-snow', 'shadow-md');
+            // 設定 active 按鈕樣式
+            const activeBtn = document.getElementById('nav-' + tabId);
+            activeBtn.classList.remove('text-gray-400');
+            activeBtn.classList.add('text-fuji');
+            activeBtn.querySelector('.nav-indicator').classList.add('bg-fuji-light/50');
             
-            // 將按鈕滾動到可視範圍
-            activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            // 回到頂部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // --- 切換行程天數邏輯 ---
+        function switchDay(dayId) {
+            // 隱藏所有日期的內容
+            document.querySelectorAll('.day-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // 顯示被選中的日期內容
+            const targetContent = document.getElementById(dayId + '-content');
+            if (targetContent) {
+                targetContent.style.display = 'block';
+            }
+
+            // 更新日期導航按鈕樣式
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-fuji', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-gray-600', 'shadow-sm', 'border', 'border-gray-100');
+                btn.querySelector('span:last-child').classList.remove('text-fuji-light');
+                btn.querySelector('span:last-child').classList.add('text-gray-400');
+            });
+
+            const activeBtn = document.getElementById('btn-' + dayId);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-gray-600', 'shadow-sm', 'border', 'border-gray-100');
+                activeBtn.classList.add('active', 'bg-fuji', 'text-white', 'shadow-md');
+                activeBtn.querySelector('span:last-child').classList.remove('text-gray-400');
+                activeBtn.querySelector('span:last-child').classList.add('text-fuji-light');
+
+                // 自動將選取的按鈕滑動到可視範圍
+                activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('exchange-rate').addEventListener('input', calculateExchange);
+            // 預設顯示 Day 1
+            switchDay('day1');
+        });
     </script>
 </body>
 </html>
