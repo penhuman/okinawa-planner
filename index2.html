@@ -1,744 +1,723 @@
-{\rtf1\ansi\ansicpg950\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red236\green241\blue247;\red251\green0\blue7;
-\red98\green98\blue98;\red42\green42\blue42;\red107\green0\blue1;\red0\green0\blue255;\red77\green80\blue85;
-\red0\green0\blue0;\red24\green112\blue43;\red14\green110\blue109;\red9\green60\blue148;\red19\green118\blue70;
-\red111\green14\blue195;\red164\green69\blue11;}
-{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c94118\c95686\c97647;\cssrgb\c100000\c0\c0;
-\cssrgb\c45882\c45882\c45882;\cssrgb\c21961\c21961\c21961;\cssrgb\c50196\c0\c0;\cssrgb\c0\c0\c100000;\cssrgb\c37255\c38824\c40784;
-\cssrgb\c0\c0\c0;\cssrgb\c9412\c50196\c21961;\cssrgb\c0\c50196\c50196;\cssrgb\c1569\c31765\c64706;\cssrgb\c3529\c52549\c34510;
-\cssrgb\c51765\c18824\c80784;\cssrgb\c70980\c34902\c3137;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>沖繩夏日自駕慢遊</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Zen Maru Gothic & M PLUS Rounded 1c -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fuji: {
+                            light: '#b3d4ff',
+                            DEFAULT: '#4a90e2', // 富士藍
+                            dark: '#2c5282',
+                        },
+                        snow: '#ffffff', // 雪白
+                        warmgray: {
+                            light: '#f5f5f5',
+                            DEFAULT: '#e0e0e0', // 暖灰
+                            dark: '#9e9e9e',
+                        },
+                        coral: '#ff7f50', // 珊瑚色 (點綴)
+                        sand: '#f4a460',  // 沙色 (點綴)
+                    },
+                    fontFamily: {
+                        sans: ['"Zen Maru Gothic"', '"M PLUS Rounded 1c"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'float': '0 -2px 10px rgba(0, 0, 0, 0.05)',
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            /* 可愛的海浪/雲朵背景紋理 */
+            background-image: radial-gradient(#b3d4ff 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #333;
+            -webkit-tap-highlight-color: transparent;
+            padding-bottom: 80px; /* 為底部導覽列留空間 */
+        }
 
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 <\cf7 \strokec7 html\cf5 \strokec5  \cf4 \strokec4 lang\cf6 \strokec6 =\cf8 \strokec8 "zh-TW"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 <\cf7 \strokec7 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3     \cf6 \strokec6 <\cf7 \strokec7 meta\cf5 \strokec5  \cf4 \strokec4 charset\cf6 \strokec6 =\cf8 \strokec8 "UTF-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 meta\cf5 \strokec5  \cf4 \strokec4 name\cf6 \strokec6 =\cf8 \strokec8 "viewport"\cf5 \strokec5  \cf4 \strokec4 content\cf6 \strokec6 =\cf8 \strokec8 "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 title\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27798 \u32361 \u22799 \u26085 \u33258 \u39381 \u24930 \u36938 \cf6 \strokec6 </\cf7 \strokec7 title\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf9 \strokec9 <!-- Tailwind CSS -->\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf8 \strokec8 "https://cdn.tailwindcss.com"\cf6 \strokec6 ></\cf7 \strokec7 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf9 \strokec9 <!-- Font Awesome for Icons -->\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf5 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "stylesheet"\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf9 \strokec9 <!-- Google Fonts: Zen Maru Gothic & M PLUS Rounded 1c -->\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf5 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "preconnect"\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://fonts.googleapis.com"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf5 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "preconnect"\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://fonts.gstatic.com"\cf5 \strokec5  \cf4 \strokec4 crossorigin\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"\cf5 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "stylesheet"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cb1 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         tailwind\strokec10 .\strokec5 config \strokec10 =\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             theme\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 extend\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                     colors\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                         fuji\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                             light\strokec10 :\strokec5  \cf11 \strokec11 '#b3d4ff'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                             \cf12 \strokec12 DEFAULT\cf5 \strokec10 :\strokec5  \cf11 \strokec11 '#4a90e2'\cf5 \strokec10 ,\strokec5  \cf9 \strokec9 // \uc0\u23500 \u22763 \u34253 \cf5 \cb1 \strokec5 \
-\cb3                             dark\strokec10 :\strokec5  \cf11 \strokec11 '#2c5282'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                         \strokec10 \},\cb1 \strokec5 \
-\cb3                         snow\strokec10 :\strokec5  \cf11 \strokec11 '#ffffff'\cf5 \strokec10 ,\strokec5  \cf9 \strokec9 // \uc0\u38634 \u30333 \cf5 \cb1 \strokec5 \
-\cb3                         warmgray\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                             light\strokec10 :\strokec5  \cf11 \strokec11 '#f5f5f5'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                             \cf12 \strokec12 DEFAULT\cf5 \strokec10 :\strokec5  \cf11 \strokec11 '#e0e0e0'\cf5 \strokec10 ,\strokec5  \cf9 \strokec9 // \uc0\u26262 \u28784 \cf5 \cb1 \strokec5 \
-\cb3                             dark\strokec10 :\strokec5  \cf11 \strokec11 '#9e9e9e'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                         \strokec10 \},\cb1 \strokec5 \
-\cb3                         coral\strokec10 :\strokec5  \cf11 \strokec11 '#ff7f50'\cf5 \strokec10 ,\strokec5  \cf9 \strokec9 // \uc0\u29642 \u29786 \u33394  (\u40670 \u32180 )\cf5 \cb1 \strokec5 \
-\cb3                         sand\strokec10 :\strokec5  \cf11 \strokec11 '#f4a460'\cf5 \strokec10 ,\strokec5   \cf9 \strokec9 // \uc0\u27801 \u33394  (\u40670 \u32180 )\cf5 \cb1 \strokec5 \
-\cb3                     \strokec10 \},\cb1 \strokec5 \
-\cb3                     fontFamily\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                         sans\strokec10 :\strokec5  \strokec10 [\cf11 \strokec11 '"Zen Maru Gothic"'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 '"M PLUS Rounded 1c"'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'sans-serif'\cf5 \strokec10 ],\cb1 \strokec5 \
-\cb3                     \strokec10 \},\cb1 \strokec5 \
-\cb3                     boxShadow\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                         \cf11 \strokec11 'soft'\cf5 \strokec10 :\strokec5  \cf11 \strokec11 '0 4px 20px rgba(0, 0, 0, 0.05)'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                         \cf11 \strokec11 'float'\cf5 \strokec10 :\strokec5  \cf11 \strokec11 '0 -2px 10px rgba(0, 0, 0, 0.05)'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                     \strokec10 \},\cb1 \strokec5 \
-\cb3                     borderRadius\strokec10 :\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                         \cf11 \strokec11 'xl'\cf5 \strokec10 :\strokec5  \cf11 \strokec11 '1rem'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                         \cf11 \strokec11 '2xl'\cf5 \strokec10 :\strokec5  \cf11 \strokec11 '1.5rem'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                         \cf11 \strokec11 '3xl'\cf5 \strokec10 :\strokec5  \cf11 \strokec11 '2rem'\cf5 \strokec10 ,\cb1 \strokec5 \
-\cb3                     \strokec10 \}\cb1 \strokec5 \
-\cb3                 \strokec10 \}\cb1 \strokec5 \
-\cb3             \strokec10 \}\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf7 \strokec7 body\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #f8fafc\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf9 \strokec9 /* \uc0\u21487 \u24859 \u30340 \u28023 \u28010 /\u38642 \u26421 \u32972 \u26223 \u32011 \u29702  */\cf5 \cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background-image:\cf5 \strokec5  \cf13 \strokec13 radial-gradient(#b3d4ff\cf5 \strokec5  \cf14 \strokec14 1px\cf5 \strokec10 ,\strokec5  \cf13 \strokec13 transparent\cf5 \strokec5  \cf14 \strokec14 1px\cf13 \strokec13 )\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 background-size:\cf5 \strokec5  \cf14 \strokec14 20px\cf5 \strokec5  \cf14 \strokec14 20px\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #333\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 -webkit-tap-highlight-color:\cf5 \strokec5  \cf13 \strokec13 transparent\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 padding-bottom:\cf5 \strokec5  \cf14 \strokec14 80px\cf5 \strokec10 ;\strokec5  \cf9 \strokec9 /* \uc0\u28858 \u24213 \u37096 \u23566 \u35261 \u21015 \u30041 \u31354 \u38291  */\cf5 \cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf7 \strokec7 .hide-scrollbar::-webkit-scrollbar\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf13 \strokec13 none\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .hide-scrollbar\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 -ms-overflow-style:\cf5 \strokec5  \cf13 \strokec13 none\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 scrollbar-width:\cf5 \strokec5  \cf13 \strokec13 none\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf7 \strokec7 .tab-content\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf13 \strokec13 none\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 animation:\cf5 \strokec5  \cf13 \strokec13 fadeIn\cf5 \strokec5  \cf14 \strokec14 0.3s\cf5 \strokec5  \cf13 \strokec13 ease-in-out\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .tab-content.active\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf13 \strokec13 block\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf15 \strokec15 @keyframes\cf5 \strokec5  \cf13 \strokec13 fadeIn\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf13 \strokec13 from\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 opacity:\cf5 \strokec5  \cf14 \strokec14 0\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 transform:\cf5 \strokec5  \cf13 \strokec13 translateY(\cf14 \strokec14 10px\cf13 \strokec13 )\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3             \cf13 \strokec13 to\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 opacity:\cf5 \strokec5  \cf14 \strokec14 1\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 transform:\cf5 \strokec5  \cf13 \strokec13 translateY(\cf14 \strokec14 0\cf13 \strokec13 )\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf7 \strokec7 .day-content\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf13 \strokec13 none\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 animation:\cf5 \strokec5  \cf13 \strokec13 slideIn\cf5 \strokec5  \cf14 \strokec14 0.3s\cf5 \strokec5  \cf13 \strokec13 ease-out\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .day-content.active\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf13 \strokec13 block\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf15 \strokec15 @keyframes\cf5 \strokec5  \cf13 \strokec13 slideIn\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf13 \strokec13 from\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 opacity:\cf5 \strokec5  \cf14 \strokec14 0\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 transform:\cf5 \strokec5  \cf13 \strokec13 translateX(\cf14 \strokec14 20px\cf13 \strokec13 )\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3             \cf13 \strokec13 to\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 opacity:\cf5 \strokec5  \cf14 \strokec14 1\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 transform:\cf5 \strokec5  \cf13 \strokec13 translateX(\cf14 \strokec14 0\cf13 \strokec13 )\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf7 \strokec7 .tag\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 font-size:\cf5 \strokec5  \cf14 \strokec14 0.7rem\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 padding:\cf5 \strokec5  \cf14 \strokec14 0.15rem\cf5 \strokec5  \cf14 \strokec14 0.5rem\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 border-radius:\cf5 \strokec5  \cf14 \strokec14 9999px\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 font-weight:\cf5 \strokec5  \cf14 \strokec14 700\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .tag-food\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #fef08a\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #854d0e\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .tag-activity\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #bbf7d0\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #166534\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .tag-shopping\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #fbcfe8\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #9d174d\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .tag-spot\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #bfdbfe\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #1e3a8a\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .tag-hotel\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #e9d5ff\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #6b21a8\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .tag-transport\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #e5e7eb\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #374151\cf5 \strokec10 ;\strokec5  \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf7 \strokec7 .highlight-eat\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #ffedd5\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #c2410c\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 border:\cf5 \strokec5  \cf14 \strokec14 1px\cf5 \strokec5  \cf13 \strokec13 solid\cf5 \strokec5  \cf13 \strokec13 #fdba74\cf5 \strokec10 ;\}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .highlight-buy\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #fce7f3\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #be185d\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 border:\cf5 \strokec5  \cf14 \strokec14 1px\cf5 \strokec5  \cf13 \strokec13 solid\cf5 \strokec5  \cf13 \strokec13 #f9a8d4\cf5 \strokec10 ;\}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .highlight-photo\cf5 \strokec5  \strokec10 \{\strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  \cf13 \strokec13 #dbeafe\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 color:\cf5 \strokec5  \cf13 \strokec13 #1d4ed8\cf5 \strokec10 ;\strokec5  \cf4 \strokec4 border:\cf5 \strokec5  \cf14 \strokec14 1px\cf5 \strokec5  \cf13 \strokec13 solid\cf5 \strokec5  \cf13 \strokec13 #93c5fd\cf5 \strokec10 ;\}\cb1 \strokec5 \
-\
-\cb3         \cf9 \strokec9 /* \uc0\u33258 \u35330  input file \u25353 \u37397 \u27171 \u24335  */\cf5 \cb1 \strokec5 \
-\cb3         \cf7 \strokec7 input\cf5 \strokec10 [\cf13 \strokec13 type\cf5 \strokec10 =\cf11 \strokec11 "file"\cf5 \strokec10 ]\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf13 \strokec13 none\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3         \cf7 \strokec7 .upload-btn\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf13 \strokec13 inline-block\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \cf4 \strokec4 cursor:\cf5 \strokec5  \cf13 \strokec13 pointer\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 </\cf7 \strokec7 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 <\cf7 \strokec7 body\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-sans antialiased max-w-md mx-auto relative min-h-screen shadow-2xl bg-white overflow-x-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\pard\pardeftab720\partightenfactor0
-\cf5 \cb3     \cf6 \strokec6 <\cf7 \strokec7 header\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-fuji text-snow rounded-b-3xl shadow-soft pt-12 pb-6 px-6 relative overflow-hidden z-10"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf9 \strokec9 <!-- \uc0\u35037 \u39166 \u32972 \u26223 \u22294 \u26696  -->\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute -right-6 -top-6 text-fuji-light opacity-30 text-8xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-sun"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative z-10 flex justify-between items-end"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-fuji-light text-sm font-bold tracking-wider mb-1"\cf6 \strokec6 >\cf5 \strokec5 OKINAWA ROAD TRIP\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 h1\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-3xl font-bold tracking-tight"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27798 \u32361 \u22799 \u26085 \u24930 \u36938 \cf6 \strokec6 </\cf7 \strokec7 h1\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm mt-2 opacity-90"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-regular fa-calendar-alt mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5  2026/05/21 - 05/27\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-snow text-fuji w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform rotate-12"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-car text-xl"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 header\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 main\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "p-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cb1 \
-\cb3         \cf9 \strokec9 <!-- ==================== \uc0\u34892 \u31243  (Itinerary) ==================== -->\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "tab-itinerary"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tab-content active"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf9 \strokec9 <!-- \uc0\u22825 \u25976 \u36984 \u25799 \u22120  (\u27243 \u21521 \u25458 \u21205 ) -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex overflow-x-auto hide-scrollbar gap-3 py-2 mb-4 snap-x"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchDay(1)"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "btn-day1"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-btn snap-start flex-shrink-0 bg-fuji text-snow px-5 py-3 rounded-2xl font-bold shadow-md transition-all"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "block text-xs font-normal opacity-80"\cf6 \strokec6 >\cf5 \strokec5 5/21 (\uc0\u22235 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     Day 1\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchDay(2)"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "btn-day2"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "block text-xs font-normal opacity-80"\cf6 \strokec6 >\cf5 \strokec5 5/22 (\uc0\u20116 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     Day 2\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchDay(3)"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "btn-day3"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "block text-xs font-normal opacity-80"\cf6 \strokec6 >\cf5 \strokec5 5/23 (\uc0\u20845 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     Day 3\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchDay(4)"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "btn-day4"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "block text-xs font-normal opacity-80"\cf6 \strokec6 >\cf5 \strokec5 5/24 (\uc0\u26085 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     Day 4\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf9 \strokec9 <!-- \uc0\u31777 \u21270 \u23637 \u31034 \u65292 \u21482 \u35443 \u32048 \u20570 \u24190 \u22825  -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchDay(7)"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "btn-day7"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "block text-xs font-normal opacity-80"\cf6 \strokec6 >\cf5 \strokec5 5/27 (\uc0\u19977 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     Day 7\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "day1-content"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-content active"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center justify-between mb-4 px-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold text-gray-800"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-plane-arrival text-fuji mr-2"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u21021 \u25269 \u37027 \u38712 \u65294 \u21855 \u31243 \cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf9 \strokec9 <!-- \uc0\u27599 \u26085 \u24314 \u35696 \u25552 \u31034  -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-2xl mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u55356 \u57124 \u65039 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-bold text-blue-900"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20170 \u26085 \u22825 \u27683 \u33287 \u31359 \u33879 \u25552 \u31034  (28\'b0/24\'b0)\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-blue-800 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27798 \u32361 5\u26376 \u24050 \u28472 \u29105 \u65292 \u30333 \u22825 \u26228 \u26178 \u22810 \u38642 \u65292 \u24314 \u35696 \u31359 \u33879 \u30701 \u34966 \u36879 \u27683 \u34915 \u29289 \u12290 \u21462 \u36554 \u38656 \u28310 \u20633 \u39381 \u29031 \u26085 \u25991 \u35695 \u26412 \u21450 \u21488 \u28771 \u39381 \u29031 \u27491 \u26412 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf9 \strokec9 <!-- \uc0\u26178 \u38291 \u36600 \u21345 \u29255  1: \u33322 \u29677  -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl p-4 shadow-soft border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-start mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag tag-transport"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u33322 \u29677 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full border border-green-200"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-regular fa-circle-check mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u28310 \u26178 \cb1 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u21488 \u21271  TPE \u10132  \u27798 \u32361  OKA\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-bold text-fuji mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u26143 \u23431 \u33322 \u31354  JX870 (12:00 - 14:40)\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cb1 \
-\cb3                         \cf9 \strokec9 <!-- \uc0\u35443 \u32048 \u33322 \u29677 \u36039 \u35338  -->\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-700 flex items-start gap-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-location-dot text-gray-400 mt-0.5 w-3"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \strokec5 TPE \uc0\u26691 \u22290 \u27231 \u22580  T1 \u10132  OKA \u37027 \u38712 \u27231 \u22580  I\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-700 flex items-start gap-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-plane text-gray-400 mt-0.5 w-3"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \strokec5 \uc0\u31354 \u20013 \u24052 \u22763  A330-900 (\u22823 \u22411 ) \'b7 \u32147 \u28639 \u33369 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-700 flex items-start gap-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-utensils text-gray-400 mt-0.5 w-3"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \strokec5 \uc0\u25552 \u20379 \u39184 \u33203  \'b7 \u39131 \u34892 \u26178 \u38291  1\u23567 \u26178 40\u20998 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex gap-2 flex-wrap"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag highlight-photo text-[10px] px-2 py-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-camera mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27231 \u19978 \u20463 \u30640 \u27798 \u32361 \u28023 \u26223 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf9 \strokec9 <!-- \uc0\u26178 \u38291 \u36600 \u21345 \u29255  2: \u21462 \u36554  -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl p-4 shadow-soft border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-start mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag tag-transport"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20132 \u36890 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs font-bold text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 15:30\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 Sorasora \uc0\u31199 \u36554  (\u27231 \u22580 \u25509 \u27231 )\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-gray-600 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38928 \u32004 \u20154 \u65306 \u37165 \u25079 \u20161 \u12290 \u25269 \u36948 \u27231 \u22580 \u24460 \u30001 \u23560 \u20154 \u25509 \u27231 \u12290 \cf6 \strokec6 <\cf7 \strokec7 br\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20056 \u36554 \u36039 \u35338 \u65306 6\u22823 5\u23567 \u65292 \u20849  6 \u20491 \u34892 \u26446 \u31665 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cb1 \
-\cb3                         \cf9 \strokec9 <!-- \uc0\u39381 \u39387 \u36039 \u35338  -->\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-700 flex items-center gap-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-gas-pump text-gray-500 w-4"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \strokec5 \uc0\u21462 \u36554 \u26178 \u28858 \u28415 \u27833 \u65292 \u36996 \u36554 \u21069 \u38656 \u21152 \u28415 \u12290 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex justify-end"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-gray-100 text-gray-700 px-3 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors flex items-center gap-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-location-dot"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5  \uc0\u23566 \u33322 \cb1 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf9 \strokec9 <!-- \uc0\u26178 \u38291 \u36600 \u21345 \u29255  3: \u26223 \u40670  -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl p-4 shadow-soft border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-start mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag tag-spot"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u26223 \u40670 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs font-bold text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 17:00\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u28712 \u38263 \u23798  Umikaji Terrace\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-gray-600 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u32020 \u30333 \u33394 \u30340 \u24314 \u31689 \u32676 \u25645 \u37197 \u28023 \u26223 \u65292 \u26377 \u12300 \u27798 \u32361 \u23567 \u24076 \u33240 \u12301 \u20043 \u31281 \u12290 \u36969 \u21512 \u30475 \u22805 \u38525 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cb1 \
-\cb3                         \cf9 \strokec9 <!-- \uc0\u24517 \u36023 \u24517 \u21507 \u27161 \u31844  -->\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex gap-2 flex-wrap"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag highlight-eat text-[10px] px-2 py-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-utensils mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u24184 \u31119 \u39686 \u39173  (\u38656 \u20505 \u20301 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag highlight-photo text-[10px] px-2 py-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-camera mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u32020 \u30333 \u38542 \u26799 \u33287 \u39131 \u27231 \u36215 \u38477 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf9 \strokec9 <!-- \uc0\u20572 \u36554 \u36039 \u35338  -->\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-700 flex items-center gap-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-square-parking text-gray-500 w-4"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20633 \u26377 \u20813 \u36027 \u20572 \u36554 \u22580 \u65292 \u20294 \u40643 \u26127 \u26178 \u27573 \u36554 \u20301 \u36611 \u28415 \u12290 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf9 \strokec9 <!-- \uc0\u26053 \u35352 \u29031 \u29255 \u19978 \u20659 \u21312 \u22602  -->\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-4 border-t border-dashed border-gray-200 pt-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-500 mb-2 font-medium"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u25105 \u30340 \u26053 \u35352 \u29031 \u29255 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex gap-2"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "photo-gallery-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf9 \strokec9 <!-- \uc0\u38928 \u35261 \u22294 \u21312 \u22602  -->\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 label\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "upload-btn w-16 h-16 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center text-gray-400 hover:bg-gray-50 transition-colors"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-plus text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf7 \strokec7 input\cf5 \strokec5  \cf4 \strokec4 type\cf6 \strokec6 =\cf8 \strokec8 "file"\cf5 \strokec5  \cf4 \strokec4 accept\cf6 \strokec6 =\cf8 \strokec8 "image/*"\cf5 \strokec5  \cf4 \strokec4 onchange\cf6 \strokec6 =\cf8 \strokec8 "previewImage(event, 'photo-gallery-1')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf7 \strokec7 label\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex justify-end"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-gray-100 text-gray-700 px-3 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors flex items-center gap-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-location-dot"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5  \uc0\u23566 \u33322 \cb1 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf9 \strokec9 <!-- \uc0\u26178 \u38291 \u36600 \u32080 \u26463 \u27161 \u35352  -->\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "h-6"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "day2-content"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-content"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center justify-between mb-4 px-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold text-gray-800"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-fish text-fuji mr-2"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u28023 \u27915 \u21338 \u20844 \u22290 \u33287 \u21271 \u37096 \u28023 \u23736 \cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-2xl mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u9925 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-bold text-blue-900"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20170 \u26085 \u22825 \u27683 \u33287 \u31359 \u33879 \u25552 \u31034  (29\'b0/25\'b0)\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-blue-800 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u22810 \u38642 \u26178 \u26228 \u65292 \u32043 \u22806 \u32218 \u20559 \u24375 \u12290 \u22810 \u21322 \u28858 \u25142 \u22806 \u21450 \u27700 \u26063 \u39208 \u34892 \u31243 \u65292 \u35531 \u27880 \u24847 \u38450 \u26348 \u20006 \u31359 \u33879 \u22909 \u36208 \u30340 \u20241 \u38290 \u38795 \u12290 \u21271 \u37096 \u36554 \u31243 \u36611 \u38263 \u65292 \u27880 \u24847 \u27833 \u37327 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl p-4 shadow-soft border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-start mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag tag-spot"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u26223 \u40670 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs font-bold text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 10:00\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u32654 \u40599 \u28023 \u27700 \u26063 \u39208 \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-gray-600 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u24517 \u30475 \u40657 \u28526 \u20043 \u28023 \u30340 \u39912 \u39882 \u33287 \u39740 \u34656 \u39775 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cb1 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex gap-2 flex-wrap"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag highlight-photo text-[10px] px-2 py-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-camera mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u24040 \u22823 \u27700 \u27133 \u21069 \u21098 \u24433 \u29031 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-700 flex items-center gap-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-square-parking text-gray-500 w-4"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \strokec5 P7 \uc0\u21271 \u20572 \u36554 \u22580 \u38626 \u27700 \u26063 \u39208 \u20837 \u21475 \u26368 \u36817 \u12290 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf9 \strokec9 <!-- \uc0\u26053 \u35352 \u29031 \u29255 \u19978 \u20659 \u21312 \u22602  -->\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-4 border-t border-dashed border-gray-200 pt-3"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-500 mb-2 font-medium"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u25105 \u30340 \u26053 \u35352 \u29031 \u29255 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex gap-2"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "photo-gallery-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 label\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "upload-btn w-16 h-16 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center text-gray-400 hover:bg-gray-50 transition-colors"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-plus text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                     \cf6 \strokec6 <\cf7 \strokec7 input\cf5 \strokec5  \cf4 \strokec4 type\cf6 \strokec6 =\cf8 \strokec8 "file"\cf5 \strokec5  \cf4 \strokec4 accept\cf6 \strokec6 =\cf8 \strokec8 "image/*"\cf5 \strokec5  \cf4 \strokec4 onchange\cf6 \strokec6 =\cf8 \strokec8 "previewImage(event, 'photo-gallery-2')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 </\cf7 \strokec7 label\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex justify-end"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "#"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-gray-100 text-gray-700 px-3 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors flex items-center gap-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-location-dot"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5  \uc0\u23566 \u33322 \cb1 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                  \cf9 \strokec9 <!-- \uc0\u26178 \u38291 \u36600 \u32080 \u26463 \u27161 \u35352  -->\cf5 \cb1 \strokec5 \
-\cb3                  \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "h-6"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "day4-content"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-content"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center justify-between mb-4 px-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold text-gray-800"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-car-side text-fuji mr-2"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u24066 \u21312 \u31227 \u21205 \u33287 \u36996 \u36554 \cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-2xl mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u9925 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-bold text-blue-900"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20170 \u26085 \u22825 \u27683 \u33287 \u31359 \u33879 \u25552 \u31034  (28\'b0/25\'b0)\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-blue-800 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u22825 \u27683 \u22810 \u38642 \u12290 \u20170 \u26085 \u32080 \u26463 \u33258 \u39381 \u36681 \u24448 \u37027 \u38712 \u24066 \u21312 \u65292 \u24460 \u32396 \u23559 \u25645 \u20056 \u22823 \u30526 \u36939 \u36664 \u25110 \u27493 \u34892 \u65292 \u35531 \u31359 \u33879 \u33298 \u36969 \u22909 \u36208 \u30340 \u38795 \u23376 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl p-4 shadow-soft border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-start mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag tag-transport"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20132 \u36890 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs font-bold text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 16:00\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 Sorasora \uc0\u36996 \u36554 \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-gray-600 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u32080 \u26463 \u33258 \u39381 \u34892 \u31243 \u65292 \u36774 \u29702 \u36996 \u36554 \u25163 \u32396 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cb1 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-700 flex items-center gap-2 text-red-600 font-bold"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-gas-pump w-4"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27880 \u24847 \u65306 \u36996 \u36554 \u21069 \u21209 \u24517 \u21152 \u28415 \u27833 \u65292 \u20006 \u20445 \u30041 \u25910 \u25818 \u65281 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl p-4 shadow-soft border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-start mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag tag-hotel"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20303 \u23487 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs font-bold text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 17:00\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u21069 \u24448 \u22283 \u38555 \u36890 \u21608 \u37002 \u20303 \u23487 \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-gray-600 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u36996 \u36554 \u24460 \u36681 \u24448 \u22283 \u38555 \u36890 \u65292 \u36774 \u29702 \u20837 \u20303 \u25163 \u32396 \u65292 \u26202 \u19978 \u22312 \u24066 \u21312 \u36891 \u34903 \u21507 \u32654 \u39135 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex gap-2 flex-wrap"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag highlight-eat text-[10px] px-2 py-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-utensils mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u23627 \u21488 \u26449 /\u26262 \u26286 \u25289 \u40629 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag highlight-buy text-[10px] px-2 py-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-bag-shopping mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u21776 \u21513 \u35382 \u24503 \u25505 \u36092 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                  \cf9 \strokec9 <!-- \uc0\u26178 \u38291 \u36600 \u32080 \u26463 \u27161 \u35352  -->\cf5 \cb1 \strokec5 \
-\cb3                  \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "h-6"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "day7-content"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "day-content"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center justify-between mb-4 px-1"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold text-gray-800"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-plane-departure text-fuji mr-2"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u28415 \u36617 \u32780 \u27512 \cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-2xl mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u55356 \u57126 \u65039 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-bold text-blue-900"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20170 \u26085 \u22825 \u27683 \u33287 \u25552 \u31034  (28\'b0/24\'b0)\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-blue-800 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u22810 \u38642 \u26178 \u38512 \u30701 \u26283 \u38632 \u12290 \u20170 \u26085 \u28310 \u20633 \u25645 \u27231 \u36820 \u21488 \u65292 \u35531 \u38928 \u30041 \u20805 \u36275 \u26178 \u38291 \u21069 \u24448 \u27231 \u22580 \u65292 \u20006 \u30906 \u35469 \u20813 \u31237 \u21697 \u26159 \u21542 \u30342 \u24050 \u25171 \u21253 \u22949 \u30070 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl p-4 shadow-soft border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-start mb-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag tag-transport"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u33322 \u29677 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs font-bold text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 15:50 - 16:25\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-lg font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27798 \u32361  OKA \u10132  \u21488 \u21271  TPE (\u26143 \u23431  JX871)\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-gray-600 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u39131 \u34892 \u26178 \u38291 \u32004  1\u23567 \u26178 35\u20998 \u12290 \u24314 \u35696 \u26044  13:50 \u21069 \u25269 \u36948 \u37027 \u38712 \u27231 \u22580  (OKA) \u31532 \u19968 \u33322 \u24264 \u22577 \u21040 \u12290 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "mt-3 flex gap-2 flex-wrap"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tag highlight-buy text-[10px] px-2 py-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-bag-shopping mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27231 \u22580 \u20813 \u31237 \u24215 \u26368 \u24460 \u25505 \u36092 \u20276 \u25163 \u31150 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                  \cf9 \strokec9 <!-- \uc0\u26178 \u38291 \u36600 \u32080 \u26463 \u27161 \u35352  -->\cf5 \cb1 \strokec5 \
-\cb3                  \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "relative pl-6 ml-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "h-6"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf9 \strokec9 <!-- ==================== \uc0\u25351 \u21335  (Guides) ==================== -->\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "tab-guide"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tab-content"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold text-gray-800 mb-4 px-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-book-open text-fuji mr-2"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u33258 \u39381 \u25351 \u21335 \cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "grid grid-cols-2 gap-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-car-side"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800 text-sm"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20132 \u36890 \u35215 \u21063 \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-500 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38752 \u24038 \u34892 \u39387 \u38920 \u30693 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-gas-pump"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800 text-sm"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u21152 \u27833 \u25945 \u23416 \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-500 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u33258 \u21161 \u21152 \u27833 \u27493 \u39519 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-phone-volume"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800 text-sm"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u32202 \u24613 \u32879 \u32097 \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-500 mt-1"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u20107 \u25925 \u34389 \u29702 \u27969 \u31243 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-yen-sign"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800 text-sm"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u39640 \u36895 \u25910 \u36027 \cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-gray-500 mt-1"\cf6 \strokec6 >\cf5 \strokec5 ETC\uc0\u33287 \u29694 \u37329 \u36554 \u36947 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3         \cf9 \strokec9 <!-- ==================== \uc0\u22825 \u27683  (Weather) ==================== -->\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "tab-weather"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "tab-content"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold text-gray-800 mb-4 px-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-sun text-fuji mr-2"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5 \uc0\u27798 \u32361 \u22825 \u27683 \u38928 \u22577 \cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf9 \strokec9 <!-- \uc0\u22823 \u22825 \u27683 \u21345 \u29255  (\u39023 \u31034 \u26053 \u36938 \u26399 \u38291 \u27010 \u27841 ) -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-gradient-to-br from-fuji-light to-fuji text-white p-6 rounded-3xl shadow-md mb-6 relative overflow-hidden"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-sun absolute -right-4 -top-4 text-7xl opacity-20"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center relative z-10"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm opacity-90 mb-1"\cf6 \strokec6 >\cf5 \strokec5 5/21 \uc0\u25269 \u36948 \u39318 \u26085 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-5xl font-bold font-sans"\cf6 \strokec6 >\cf5 \strokec5 28\'b0\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm mt-2 opacity-90"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u26228 \u26178 \u22810 \u38642  \'b7 \u38477 \u38632 \u27231 \u29575  20%\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-6xl text-yellow-300 drop-shadow-md"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-sun"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3             \cf9 \strokec9 <!-- \uc0\u26053 \u31243 \u22825 \u27683 \u21015 \u34920  -->\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white rounded-2xl shadow-soft border border-gray-100 p-4 mb-6"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-bold text-gray-700 mb-3 border-b border-gray-100 pb-2"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u26053 \u31243 \u38928 \u28204  (5/21 - 5/27)\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "space-y-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf9 \strokec9 <!-- Day 1 -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-16 text-gray-700 font-medium"\cf6 \strokec6 >\cf5 \strokec5 5/21(\uc0\u22235 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center w-12 justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-sun text-yellow-500 text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-20 text-center text-xs text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38477 \u38632  20%\cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-24 text-right"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 28\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 mx-1"\cf6 \strokec6 >\cf5 \strokec5 /\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 24\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf9 \strokec9 <!-- Day 2 -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-16 text-gray-700 font-medium"\cf6 \strokec6 >\cf5 \strokec5 5/22(\uc0\u20116 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center w-12 justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud text-gray-400 text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-20 text-center text-xs text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38477 \u38632  30%\cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-24 text-right"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 29\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 mx-1"\cf6 \strokec6 >\cf5 \strokec5 /\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 25\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf9 \strokec9 <!-- Day 3 -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-16 text-gray-700 font-medium"\cf6 \strokec6 >\cf5 \strokec5 5/23(\uc0\u20845 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center w-12 justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-showers-heavy text-fuji text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-20 text-center text-xs text-fuji font-medium"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38477 \u38632  60%\cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-24 text-right"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 27\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 mx-1"\cf6 \strokec6 >\cf5 \strokec5 /\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 24\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf9 \strokec9 <!-- Day 4 -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-16 text-gray-700 font-medium"\cf6 \strokec6 >\cf5 \strokec5 5/24(\uc0\u26085 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center w-12 justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-sun text-yellow-500 text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-20 text-center text-xs text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38477 \u38632  20%\cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-24 text-right"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 28\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 mx-1"\cf6 \strokec6 >\cf5 \strokec5 /\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 25\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf9 \strokec9 <!-- Day 5 -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-16 text-gray-700 font-medium"\cf6 \strokec6 >\cf5 \strokec5 5/25(\uc0\u19968 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center w-12 justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-sun text-red-400 text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-20 text-center text-xs text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38477 \u38632  10%\cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-24 text-right"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 30\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 mx-1"\cf6 \strokec6 >\cf5 \strokec5 /\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 26\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf9 \strokec9 <!-- Day 6 -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-16 text-gray-700 font-medium"\cf6 \strokec6 >\cf5 \strokec5 5/26(\uc0\u20108 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center w-12 justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-sun text-yellow-500 text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-20 text-center text-xs text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38477 \u38632  20%\cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-24 text-right"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 29\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 mx-1"\cf6 \strokec6 >\cf5 \strokec5 /\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 25\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf9 \strokec9 <!-- Day 7 -->\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex justify-between items-center text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-16 text-gray-700 font-medium"\cf6 \strokec6 >\cf5 \strokec5 5/27(\uc0\u19977 )\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex items-center w-12 justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-meatball text-gray-400 text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-20 text-center text-xs text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u38477 \u38632  40%\cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-24 text-right"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-gray-800"\cf6 \strokec6 >\cf5 \strokec5 28\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-400 mx-1"\cf6 \strokec6 >\cf5 \strokec5 /\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-gray-500"\cf6 \strokec6 >\cf5 \strokec5 24\'b0\cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-blue-50 border border-blue-100 p-4 rounded-2xl shadow-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm font-bold text-blue-900 mb-1"\cf6 \strokec6 ><\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-circle-info mr-1"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \strokec5  \uc0\u21021 \u22799 \u27683 \u20505 \u23567 \u25552 \u37266 \cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-blue-800 leading-relaxed"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                     5 \uc0\u26376 \u19979 \u26092 \u30340 \u27798 \u32361 \u24050 \u32147 \u30456 \u30070 \u28331 \u26262 \u65292 \u39640 \u28331 \u21487 \u36948 \u23559 \u36817  30 \u24230 \u12290 \u20294 \u30001 \u26044 \u36880 \u28472 \u36914 \u20837 \u26757 \u38632 \u23395 \u31680 \u65292 \u22825 \u27683 \u35722 \u21270 \u36611 \u24555 \u65292 \u24314 \u35696 \u38500 \u20102 \u28310 \u20633 \u36879 \u27683 \u30340 \u22799 \u23395 \u34915 \u29289 \u12289 \u22826 \u38525 \u30524 \u37857 \u33287 \u38450 \u26348 \u20083 \u22806 \u65292 \u36554 \u19978 \u20063 \u21487 \u38568 \u26178 \u20633 \u33879 \u24190 \u25226 \u36629 \u20415 \u38632 \u20632 \u20197 \u38450 \u20598 \u38499 \u38632 \u12290 \cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 main\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 nav\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md shadow-float rounded-2xl flex justify-around p-3 z-50 border border-gray-100"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchTab('itinerary')"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "nav-itinerary"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "nav-btn flex flex-col items-center text-fuji transition-colors"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-fuji-light/30 w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-map-location-dot text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-[10px] font-bold"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u34892 \u31243 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchTab('guide')"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "nav-guide"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "nav-btn flex flex-col items-center text-gray-400 hover:text-fuji transition-colors"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-regular fa-compass text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-[10px] font-bold"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u25351 \u21335 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "switchTab('weather')"\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "nav-weather"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "nav-btn flex flex-col items-center text-gray-400 hover:text-fuji transition-colors"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 i\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fa-solid fa-cloud-sun text-lg"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-[10px] font-bold"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u22825 \u27683 \cf6 \strokec6 </\cf7 \strokec7 span\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 nav\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cb3         \cf9 \strokec9 // \uc0\u20999 \u25563 \u20027 \u36984 \u21934  (Tabs)\cf5 \cb1 \strokec5 \
-\cb3         \cf15 \strokec15 function\cf5 \strokec5  switchTab\strokec10 (\strokec5 tabId\strokec10 )\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf9 \strokec9 // \uc0\u38577 \u34255 \u25152 \u26377  tab \u20839 \u23481 \cf5 \cb1 \strokec5 \
-\cb3             document\strokec10 .\strokec5 querySelectorAll\strokec10 (\cf11 \strokec11 '.tab-content'\cf5 \strokec10 ).\strokec5 forEach\strokec10 (\strokec5 el \strokec10 =>\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 el\strokec10 .\strokec5 classList\strokec10 .\strokec5 remove\strokec10 (\cf11 \strokec11 'active'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             \strokec10 \});\cb1 \strokec5 \
-\cb3             \cf9 \strokec9 // \uc0\u39023 \u31034 \u36984 \u20013 \u30340  tab \u20839 \u23481 \cf5 \cb1 \strokec5 \
-\cb3             document\strokec10 .\strokec5 getElementById\strokec10 (\cf11 \strokec11 'tab-'\cf5 \strokec5  \strokec10 +\strokec5  tabId\strokec10 ).\strokec5 classList\strokec10 .\strokec5 add\strokec10 (\cf11 \strokec11 'active'\cf5 \strokec10 );\cb1 \strokec5 \
-\
-\cb3             \cf9 \strokec9 // \uc0\u26356 \u26032 \u24213 \u37096 \u23566 \u35261 \u21015 \u27171 \u24335 \cf5 \cb1 \strokec5 \
-\cb3             document\strokec10 .\strokec5 querySelectorAll\strokec10 (\cf11 \strokec11 '.nav-btn'\cf5 \strokec10 ).\strokec5 forEach\strokec10 (\strokec5 btn \strokec10 =>\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 btn\strokec10 .\strokec5 classList\strokec10 .\strokec5 remove\strokec10 (\cf11 \strokec11 'text-fuji'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3                 btn\strokec10 .\strokec5 classList\strokec10 .\strokec5 add\strokec10 (\cf11 \strokec11 'text-gray-400'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3                 btn\strokec10 .\strokec5 querySelector\strokec10 (\cf11 \strokec11 '.nav-indicator'\cf5 \strokec10 ).\strokec5 classList\strokec10 .\strokec5 remove\strokec10 (\cf11 \strokec11 'bg-fuji-light/30'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             \strokec10 \});\cb1 \strokec5 \
-\
-\cb3             \cf15 \strokec15 const\cf5 \strokec5  activeBtn \strokec10 =\strokec5  document\strokec10 .\strokec5 getElementById\strokec10 (\cf11 \strokec11 'nav-'\cf5 \strokec5  \strokec10 +\strokec5  tabId\strokec10 );\cb1 \strokec5 \
-\cb3             activeBtn\strokec10 .\strokec5 classList\strokec10 .\strokec5 remove\strokec10 (\cf11 \strokec11 'text-gray-400'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             activeBtn\strokec10 .\strokec5 classList\strokec10 .\strokec5 add\strokec10 (\cf11 \strokec11 'text-fuji'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             activeBtn\strokec10 .\strokec5 querySelector\strokec10 (\cf11 \strokec11 '.nav-indicator'\cf5 \strokec10 ).\strokec5 classList\strokec10 .\strokec5 add\strokec10 (\cf11 \strokec11 'bg-fuji-light/30'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf9 \strokec9 // \uc0\u20999 \u25563 \u22825 \u25976 \u34892 \u31243  (Days)\cf5 \cb1 \strokec5 \
-\cb3         \cf15 \strokec15 function\cf5 \strokec5  switchDay\strokec10 (\strokec5 day\strokec10 )\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf9 \strokec9 // \uc0\u38577 \u34255 \u25152 \u26377  day \u20839 \u23481 \cf5 \cb1 \strokec5 \
-\cb3             document\strokec10 .\strokec5 querySelectorAll\strokec10 (\cf11 \strokec11 '.day-content'\cf5 \strokec10 ).\strokec5 forEach\strokec10 (\strokec5 el \strokec10 =>\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 el\strokec10 .\strokec5 classList\strokec10 .\strokec5 remove\strokec10 (\cf11 \strokec11 'active'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             \strokec10 \});\cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf9 \strokec9 // \uc0\u34389 \u29702 \u22914 \u26524 \u35442 \u22825 \u27794 \u26377 \u20839 \u23481 \u30340 \u29376 \u27841 \u65288 \u31684 \u20363 \u20013 \u27794 \u26377 \u23526 \u20316 \u27599 \u19968 \u22825 \u65289 \cf5 \cb1 \strokec5 \
-\cb3             \cf15 \strokec15 const\cf5 \strokec5  targetContent \strokec10 =\strokec5  document\strokec10 .\strokec5 getElementById\strokec10 (\cf11 \strokec11 `day\cf5 \strokec10 $\{\strokec5 day\strokec10 \}\cf11 \strokec11 -content`\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             \cf15 \strokec15 if\cf5 \strokec5  \strokec10 (\strokec5 targetContent\strokec10 )\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 targetContent\strokec10 .\strokec5 classList\strokec10 .\strokec5 add\strokec10 (\cf11 \strokec11 'active'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             \strokec10 \}\strokec5  \cf15 \strokec15 else\cf5 \strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 \cf9 \strokec9 // \uc0\u22914 \u26524 \u27794 \u26377 \u36039 \u26009 \u65292 \u39023 \u31034 \u19968 \u20491 \u25552 \u31034 \cf5 \cb1 \strokec5 \
-\cb3                 alert\strokec10 (\cf11 \strokec11 `Day \cf5 \strokec10 $\{\strokec5 day\strokec10 \}\cf11 \strokec11  \uc0\u30340 \u34892 \u31243 \u23578 \u26410 \u23433 \u25490 `\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3                 \cf9 \strokec9 // \uc0\u20445 \u25345 \u22312 \u30070 \u21069 \u30059 \u38754 \u25110 \u20999 \u22238 \u31532 \u19968 \u22825 \u65292 \u36889 \u35041 \u31777 \u21934 \u34389 \u29702 \cf5 \cb1 \strokec5 \
-\cb3                 \cf15 \strokec15 return\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3             \strokec10 \}\cb1 \strokec5 \
-\
-\cb3             \cf9 \strokec9 // \uc0\u26356 \u26032 \u25353 \u37397 \u27171 \u24335 \cf5 \cb1 \strokec5 \
-\cb3             document\strokec10 .\strokec5 querySelectorAll\strokec10 (\cf11 \strokec11 '.day-btn'\cf5 \strokec10 ).\strokec5 forEach\strokec10 (\strokec5 btn \strokec10 =>\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 btn\strokec10 .\strokec5 classList\strokec10 .\strokec5 remove\strokec10 (\cf11 \strokec11 'bg-fuji'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'text-snow'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'shadow-md'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3                 btn\strokec10 .\strokec5 classList\strokec10 .\strokec5 add\strokec10 (\cf11 \strokec11 'bg-white'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'text-gray-500'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'border'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'border-gray-200'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             \strokec10 \});\cb1 \strokec5 \
-\
-\cb3             \cf15 \strokec15 const\cf5 \strokec5  activeBtn \strokec10 =\strokec5  document\strokec10 .\strokec5 getElementById\strokec10 (\cf11 \strokec11 'btn-day'\cf5 \strokec5  \strokec10 +\strokec5  day\strokec10 );\cb1 \strokec5 \
-\cb3             activeBtn\strokec10 .\strokec5 classList\strokec10 .\strokec5 remove\strokec10 (\cf11 \strokec11 'bg-white'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'text-gray-500'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'border'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'border-gray-200'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             activeBtn\strokec10 .\strokec5 classList\strokec10 .\strokec5 add\strokec10 (\cf11 \strokec11 'bg-fuji'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'text-snow'\cf5 \strokec10 ,\strokec5  \cf11 \strokec11 'shadow-md'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf9 \strokec9 // \uc0\u23559 \u25353 \u37397 \u28414 \u21205 \u21040 \u21487 \u35222 \u31684 \u22285 \cf5 \cb1 \strokec5 \
-\cb3             activeBtn\strokec10 .\strokec5 scrollIntoView\strokec10 (\{\strokec5  behavior\strokec10 :\strokec5  \cf11 \strokec11 'smooth'\cf5 \strokec10 ,\strokec5  block\strokec10 :\strokec5  \cf11 \strokec11 'nearest'\cf5 \strokec10 ,\strokec5  inline\strokec10 :\strokec5  \cf11 \strokec11 'center'\cf5 \strokec5  \strokec10 \});\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\
-\cb3         \cf9 \strokec9 // \uc0\u34389 \u29702 \u29031 \u29255 \u38928 \u35261 \u19978 \u20659 \cf5 \cb1 \strokec5 \
-\cb3         \cf15 \strokec15 function\cf5 \strokec5  previewImage\strokec10 (\strokec5 event\strokec10 ,\strokec5  galleryId\strokec10 )\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3             \cf15 \strokec15 const\cf5 \strokec5  input \strokec10 =\strokec5  event\strokec10 .\strokec5 target\strokec10 ;\cb1 \strokec5 \
-\cb3             \cf15 \strokec15 if\cf5 \strokec5  \strokec10 (\strokec5 input\strokec10 .\strokec5 files \strokec10 &&\strokec5  input\strokec10 .\strokec5 files\strokec10 [\cf16 \strokec16 0\cf5 \strokec10 ])\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                 \cf15 \strokec15 const\cf5 \strokec5  reader \strokec10 =\strokec5  \cf15 \strokec15 new\cf5 \strokec5  \cf12 \strokec12 FileReader\cf5 \strokec10 ();\cb1 \strokec5 \
-\cb3                 reader\strokec10 .\strokec5 onload \strokec10 =\strokec5  \cf15 \strokec15 function\cf5 \strokec10 (\strokec5 e\strokec10 )\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                     \cf15 \strokec15 const\cf5 \strokec5  gallery \strokec10 =\strokec5  document\strokec10 .\strokec5 getElementById\strokec10 (\strokec5 galleryId\strokec10 );\cb1 \strokec5 \
-\cb3                     \cb1 \
-\cb3                     \cf9 \strokec9 // \uc0\u21109 \u24314 \u38928 \u35261 \u22294 \u29255 \u20803 \u32032 \cf5 \cb1 \strokec5 \
-\cb3                     \cf15 \strokec15 const\cf5 \strokec5  imgContainer \strokec10 =\strokec5  document\strokec10 .\strokec5 createElement\strokec10 (\cf11 \strokec11 'div'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3                     imgContainer\strokec10 .\strokec5 className \strokec10 =\strokec5  \cf11 \strokec11 'w-16 h-16 rounded-xl overflow-hidden relative shadow-sm'\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3                     \cb1 \
-\cb3                     \cf15 \strokec15 const\cf5 \strokec5  img \strokec10 =\strokec5  document\strokec10 .\strokec5 createElement\strokec10 (\cf11 \strokec11 'img'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3                     img\strokec10 .\strokec5 src \strokec10 =\strokec5  e\strokec10 .\strokec5 target\strokec10 .\strokec5 result\strokec10 ;\cb1 \strokec5 \
-\cb3                     img\strokec10 .\strokec5 className \strokec10 =\strokec5  \cf11 \strokec11 'w-full h-full object-cover'\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3                     \cb1 \
-\cb3                     \cf9 \strokec9 // \uc0\u21152 \u20837 \u21034 \u38500 \u25353 \u37397  (\u31777 \u26131 \u29256 )\cf5 \cb1 \strokec5 \
-\cb3                     \cf15 \strokec15 const\cf5 \strokec5  delBtn \strokec10 =\strokec5  document\strokec10 .\strokec5 createElement\strokec10 (\cf11 \strokec11 'div'\cf5 \strokec10 );\cb1 \strokec5 \
-\cb3                     delBtn\strokec10 .\strokec5 className \strokec10 =\strokec5  \cf11 \strokec11 'absolute top-0 right-0 bg-black/50 text-white w-5 h-5 flex items-center justify-center rounded-bl-lg text-[10px] cursor-pointer'\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3                     delBtn\strokec10 .\strokec5 innerHTML \strokec10 =\strokec5  \cf11 \strokec11 '<i class="fa-solid fa-xmark"></i>'\cf5 \strokec10 ;\cb1 \strokec5 \
-\cb3                     delBtn\strokec10 .\strokec5 onclick \strokec10 =\strokec5  \cf15 \strokec15 function\cf5 \strokec10 ()\strokec5  \strokec10 \{\cb1 \strokec5 \
-\cb3                         gallery\strokec10 .\strokec5 removeChild\strokec10 (\strokec5 imgContainer\strokec10 );\cb1 \strokec5 \
-\cb3                     \strokec10 \};\cb1 \strokec5 \
-\
-\cb3                     imgContainer\strokec10 .\strokec5 appendChild\strokec10 (\strokec5 img\strokec10 );\cb1 \strokec5 \
-\cb3                     imgContainer\strokec10 .\strokec5 appendChild\strokec10 (\strokec5 delBtn\strokec10 );\cb1 \strokec5 \
-\cb3                     \cb1 \
-\cb3                     \cf9 \strokec9 // \uc0\u23559 \u22294 \u29255 \u25554 \u20837 \u21040 \u19978 \u20659 \u25353 \u37397 \u20043 \u21069 \cf5 \cb1 \strokec5 \
-\cb3                     gallery\strokec10 .\strokec5 insertBefore\strokec10 (\strokec5 imgContainer\strokec10 ,\strokec5  gallery\strokec10 .\strokec5 lastElementChild\strokec10 );\cb1 \strokec5 \
-\cb3                 \strokec10 \}\cb1 \strokec5 \
-\cb3                 reader\strokec10 .\strokec5 readAsDataURL\strokec10 (\strokec5 input\strokec10 .\strokec5 files\strokec10 [\cf16 \strokec16 0\cf5 \strokec10 ]);\cb1 \strokec5 \
-\cb3             \strokec10 \}\cb1 \strokec5 \
-\cb3         \strokec10 \}\cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 </\cf7 \strokec7 body\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 </\cf7 \strokec7 html\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
-}
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .day-content {
+            display: none;
+            animation: slideIn 0.3s ease-out;
+        }
+        .day-content.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+        }
+        .tag-food { background-color: #fef08a; color: #854d0e; }
+        .tag-activity { background-color: #bbf7d0; color: #166534; }
+        .tag-shopping { background-color: #fbcfe8; color: #9d174d; }
+        .tag-spot { background-color: #bfdbfe; color: #1e3a8a; }
+        .tag-hotel { background-color: #e9d5ff; color: #6b21a8; }
+        .tag-transport { background-color: #e5e7eb; color: #374151; }
+
+        .highlight-eat { background-color: #ffedd5; color: #c2410c; border: 1px solid #fdba74;}
+        .highlight-buy { background-color: #fce7f3; color: #be185d; border: 1px solid #f9a8d4;}
+        .highlight-photo { background-color: #dbeafe; color: #1d4ed8; border: 1px solid #93c5fd;}
+
+        /* 自訂 input file 按鈕樣式 */
+        input[type="file"] {
+            display: none;
+        }
+        .upload-btn {
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased max-w-md mx-auto relative min-h-screen shadow-2xl bg-white overflow-x-hidden">
+
+    <header class="bg-fuji text-snow rounded-b-3xl shadow-soft pt-12 pb-6 px-6 relative overflow-hidden z-10">
+        <!-- 裝飾背景圖案 -->
+        <div class="absolute -right-6 -top-6 text-fuji-light opacity-30 text-8xl">
+            <i class="fa-solid fa-sun"></i>
+        </div>
+        <div class="relative z-10 flex justify-between items-end">
+            <div>
+                <p class="text-fuji-light text-sm font-bold tracking-wider mb-1">OKINAWA ROAD TRIP</p>
+                <h1 class="text-3xl font-bold tracking-tight">沖繩夏日慢遊</h1>
+                <p class="text-sm mt-2 opacity-90"><i class="fa-regular fa-calendar-alt mr-1"></i> 2026/05/21 - 05/27</p>
+            </div>
+            <div class="bg-snow text-fuji w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform rotate-12">
+                <i class="fa-solid fa-car text-xl"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="p-4">
+        
+        <!-- ==================== 行程 (Itinerary) ==================== -->
+        <section id="tab-itinerary" class="tab-content active">
+            
+            <!-- 天數選擇器 (橫向捲動) -->
+            <div class="flex overflow-x-auto hide-scrollbar gap-3 py-2 mb-4 snap-x">
+                <button onclick="switchDay(1)" id="btn-day1" class="day-btn snap-start flex-shrink-0 bg-fuji text-snow px-5 py-3 rounded-2xl font-bold shadow-md transition-all">
+                    <span class="block text-xs font-normal opacity-80">5/21 (四)</span>
+                    Day 1
+                </button>
+                <button onclick="switchDay(2)" id="btn-day2" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
+                    <span class="block text-xs font-normal opacity-80">5/22 (五)</span>
+                    Day 2
+                </button>
+                <button onclick="switchDay(3)" id="btn-day3" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
+                    <span class="block text-xs font-normal opacity-80">5/23 (六)</span>
+                    Day 3
+                </button>
+                <button onclick="switchDay(4)" id="btn-day4" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
+                    <span class="block text-xs font-normal opacity-80">5/24 (日)</span>
+                    Day 4
+                </button>
+                <!-- 簡化展示，只詳細做幾天 -->
+                <button onclick="switchDay(7)" id="btn-day7" class="day-btn snap-start flex-shrink-0 bg-white text-gray-500 border border-gray-200 px-5 py-3 rounded-2xl font-bold transition-all">
+                    <span class="block text-xs font-normal opacity-80">5/27 (三)</span>
+                    Day 7
+                </button>
+            </div>
+
+            <div id="day1-content" class="day-content active">
+                <div class="flex items-center justify-between mb-4 px-1">
+                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-plane-arrival text-fuji mr-2"></i>初抵那霸．啟程</h2>
+                </div>
+
+                <!-- 每日建議提示 -->
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                    <div class="text-2xl mt-1">🌤️</div>
+                    <div>
+                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (28°/24°)</p>
+                        <p class="text-xs text-blue-800 mt-1">沖繩5月已漸熱，白天晴時多雲，建議穿著短袖透氣衣物。取車需準備駕照日文譯本及台灣駕照正本。</p>
+                    </div>
+                </div>
+
+                <!-- 時間軸卡片 1: 航班 -->
+                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="tag tag-transport">航班</span>
+                            <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full border border-green-200">
+                                <i class="fa-regular fa-circle-check mr-1"></i>準時
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">台北 TPE ➔ 沖繩 OKA</h3>
+                        <p class="text-sm font-bold text-fuji mt-1">星宇航空 JX870 (12:00 - 14:40)</p>
+                        
+                        <!-- 詳細航班資訊 -->
+                        <div class="mt-2 bg-gray-50 p-2.5 rounded-lg border border-gray-100 space-y-1.5">
+                            <p class="text-xs text-gray-700 flex items-start gap-2">
+                                <i class="fa-solid fa-location-dot text-gray-400 mt-0.5 w-3"></i>
+                                <span>TPE 桃園機場 T1 ➔ OKA 那霸機場 I</span>
+                            </p>
+                            <p class="text-xs text-gray-700 flex items-start gap-2">
+                                <i class="fa-solid fa-plane text-gray-400 mt-0.5 w-3"></i>
+                                <span>空中巴士 A330-900 (大型) · 經濟艙</span>
+                            </p>
+                            <p class="text-xs text-gray-700 flex items-start gap-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-0.5 w-3"></i>
+                                <span>提供餐膳 · 飛行時間 1小時40分</span>
+                            </p>
+                        </div>
+
+                        <div class="mt-3 flex gap-2 flex-wrap">
+                            <span class="tag highlight-photo text-[10px] px-2 py-1"><i class="fa-solid fa-camera mr-1"></i>機上俯瞰沖繩海景</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 時間軸卡片 2: 取車 -->
+                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="tag tag-transport">交通</span>
+                            <span class="text-xs font-bold text-gray-500">15:30</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Sorasora 租車 (機場接機)</h3>
+                        <p class="text-sm text-gray-600 mt-1">預約人：鄭懷仁。抵達機場後由專人接機。<br>乘車資訊：6大5小，共 6 個行李箱。</p>
+                        
+                        <!-- 駕駛資訊 -->
+                        <div class="mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200">
+                            <p class="text-xs text-gray-700 flex items-center gap-2">
+                                <i class="fa-solid fa-gas-pump text-gray-500 w-4"></i>
+                                <span>取車時為滿油，還車前需加滿。</span>
+                            </p>
+                        </div>
+
+                        <div class="mt-3 flex justify-end">
+                            <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors flex items-center gap-1">
+                                <i class="fa-solid fa-location-dot"></i> 導航
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 時間軸卡片 3: 景點 -->
+                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="tag tag-spot">景點</span>
+                            <span class="text-xs font-bold text-gray-500">17:00</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">瀨長島 Umikaji Terrace</h3>
+                        <p class="text-sm text-gray-600 mt-1">純白色的建築群搭配海景，有「沖繩小希臘」之稱。適合看夕陽。</p>
+                        
+                        <!-- 必買必吃標籤 -->
+                        <div class="mt-3 flex gap-2 flex-wrap">
+                            <span class="tag highlight-eat text-[10px] px-2 py-1"><i class="fa-solid fa-utensils mr-1"></i>幸福鬆餅 (需候位)</span>
+                            <span class="tag highlight-photo text-[10px] px-2 py-1"><i class="fa-solid fa-camera mr-1"></i>純白階梯與飛機起降</span>
+                        </div>
+
+                        <!-- 停車資訊 -->
+                        <div class="mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200">
+                            <p class="text-xs text-gray-700 flex items-center gap-2">
+                                <i class="fa-solid fa-square-parking text-gray-500 w-4"></i>
+                                <span>備有免費停車場，但黃昏時段車位較滿。</span>
+                            </p>
+                        </div>
+
+                        <!-- 旅記照片上傳區塊 -->
+                        <div class="mt-4 border-t border-dashed border-gray-200 pt-3">
+                            <p class="text-xs text-gray-500 mb-2 font-medium">我的旅記照片</p>
+                            <div class="flex gap-2" id="photo-gallery-1">
+                                <!-- 預覽圖區塊 -->
+                                <label class="upload-btn w-16 h-16 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center text-gray-400 hover:bg-gray-50 transition-colors">
+                                    <i class="fa-solid fa-plus text-lg"></i>
+                                    <input type="file" accept="image/*" onchange="previewImage(event, 'photo-gallery-1')">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 flex justify-end">
+                            <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors flex items-center gap-1">
+                                <i class="fa-solid fa-location-dot"></i> 導航
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 時間軸結束標記 -->
+                <div class="relative pl-6 ml-4">
+                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="h-6"></div>
+                </div>
+            </div>
+
+            <div id="day2-content" class="day-content">
+                <div class="flex items-center justify-between mb-4 px-1">
+                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-fish text-fuji mr-2"></i>海洋博公園與北部海岸</h2>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                    <div class="text-2xl mt-1">⛅</div>
+                    <div>
+                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (29°/25°)</p>
+                        <p class="text-xs text-blue-800 mt-1">多雲時晴，紫外線偏強。多半為戶外及水族館行程，請注意防曬並穿著好走的休閒鞋。北部車程較長，注意油量。</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="tag tag-spot">景點</span>
+                            <span class="text-xs font-bold text-gray-500">10:00</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">美麗海水族館</h3>
+                        <p class="text-sm text-gray-600 mt-1">必看黑潮之海的鯨鯊與鬼蝠魟。</p>
+                        
+                        <div class="mt-3 flex gap-2 flex-wrap">
+                            <span class="tag highlight-photo text-[10px] px-2 py-1"><i class="fa-solid fa-camera mr-1"></i>巨大水槽前剪影照</span>
+                        </div>
+
+                        <div class="mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200">
+                            <p class="text-xs text-gray-700 flex items-center gap-2">
+                                <i class="fa-solid fa-square-parking text-gray-500 w-4"></i>
+                                <span>P7 北停車場離水族館入口最近。</span>
+                            </p>
+                        </div>
+
+                        <!-- 旅記照片上傳區塊 -->
+                        <div class="mt-4 border-t border-dashed border-gray-200 pt-3">
+                            <p class="text-xs text-gray-500 mb-2 font-medium">我的旅記照片</p>
+                            <div class="flex gap-2" id="photo-gallery-2">
+                                <label class="upload-btn w-16 h-16 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center text-gray-400 hover:bg-gray-50 transition-colors">
+                                    <i class="fa-solid fa-plus text-lg"></i>
+                                    <input type="file" accept="image/*" onchange="previewImage(event, 'photo-gallery-2')">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 flex justify-end">
+                            <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors flex items-center gap-1">
+                                <i class="fa-solid fa-location-dot"></i> 導航
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- 時間軸結束標記 -->
+                 <div class="relative pl-6 ml-4">
+                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="h-6"></div>
+                </div>
+            </div>
+
+            <div id="day4-content" class="day-content">
+                <div class="flex items-center justify-between mb-4 px-1">
+                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-car-side text-fuji mr-2"></i>市區移動與還車</h2>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                    <div class="text-2xl mt-1">⛅</div>
+                    <div>
+                        <p class="text-sm font-bold text-blue-900">今日天氣與穿著提示 (28°/25°)</p>
+                        <p class="text-xs text-blue-800 mt-1">天氣多雲。今日結束自駕轉往那霸市區，後續將搭乘大眾運輸或步行，請穿著舒適好走的鞋子。</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="tag tag-transport">交通</span>
+                            <span class="text-xs font-bold text-gray-500">16:00</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Sorasora 還車</h3>
+                        <p class="text-sm text-gray-600 mt-1">結束自駕行程，辦理還車手續。</p>
+                        
+                        <div class="mt-3 bg-gray-50 p-2 rounded-lg border border-gray-200">
+                            <p class="text-xs text-gray-700 flex items-center gap-2 text-red-600 font-bold">
+                                <i class="fa-solid fa-gas-pump w-4"></i>
+                                <span>注意：還車前務必加滿油，並保留收據！</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="tag tag-hotel">住宿</span>
+                            <span class="text-xs font-bold text-gray-500">17:00</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">前往國際通周邊住宿</h3>
+                        <p class="text-sm text-gray-600 mt-1">還車後轉往國際通，辦理入住手續，晚上在市區逛街吃美食。</p>
+                        <div class="mt-3 flex gap-2 flex-wrap">
+                            <span class="tag highlight-eat text-[10px] px-2 py-1"><i class="fa-solid fa-utensils mr-1"></i>屋台村/暖暮拉麵</span>
+                            <span class="tag highlight-buy text-[10px] px-2 py-1"><i class="fa-solid fa-bag-shopping mr-1"></i>唐吉訶德採購</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- 時間軸結束標記 -->
+                 <div class="relative pl-6 ml-4">
+                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="h-6"></div>
+                </div>
+            </div>
+
+            <div id="day7-content" class="day-content">
+                <div class="flex items-center justify-between mb-4 px-1">
+                    <h2 class="text-xl font-bold text-gray-800"><i class="fa-solid fa-plane-departure text-fuji mr-2"></i>滿載而歸</h2>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-5 flex items-start gap-3 shadow-sm">
+                    <div class="text-2xl mt-1">🌦️</div>
+                    <div>
+                        <p class="text-sm font-bold text-blue-900">今日天氣與提示 (28°/24°)</p>
+                        <p class="text-xs text-blue-800 mt-1">多雲時陰短暫雨。今日準備搭機返台，請預留充足時間前往機場，並確認免稅品是否皆已打包妥當。</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-6 pb-6 border-l-2 border-fuji/30 ml-4">
+                    <div class="absolute w-4 h-4 bg-fuji rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="bg-white rounded-2xl p-4 shadow-soft border border-gray-100">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="tag tag-transport">航班</span>
+                            <span class="text-xs font-bold text-gray-500">15:50 - 16:25</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">沖繩 OKA ➔ 台北 TPE (星宇 JX871)</h3>
+                        <p class="text-sm text-gray-600 mt-1">飛行時間約 1小時35分。建議於 13:50 前抵達那霸機場 (OKA) 第一航廈報到。</p>
+                        <div class="mt-3 flex gap-2 flex-wrap">
+                            <span class="tag highlight-buy text-[10px] px-2 py-1"><i class="fa-solid fa-bag-shopping mr-1"></i>機場免稅店最後採購伴手禮</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- 時間軸結束標記 -->
+                 <div class="relative pl-6 ml-4">
+                    <div class="absolute w-4 h-4 bg-gray-300 rounded-full -left-[9px] top-1 border-4 border-white shadow"></div>
+                    <div class="h-6"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==================== 指南 (Guides) ==================== -->
+        <section id="tab-guide" class="tab-content">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 px-1"><i class="fa-solid fa-book-open text-fuji mr-2"></i>自駕指南</h2>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
+                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-sm">交通規則</h3>
+                    <p class="text-xs text-gray-500 mt-1">靠左行駛須知</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
+                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-sm">加油教學</h3>
+                    <p class="text-xs text-gray-500 mt-1">自助加油步驟</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
+                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-sm">緊急聯絡</h3>
+                    <p class="text-xs text-gray-500 mt-1">事故處理流程</p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl shadow-soft border border-gray-100 text-center cursor-pointer hover:bg-gray-50 transition">
+                    <div class="w-12 h-12 bg-fuji-light/30 rounded-full flex items-center justify-center mx-auto mb-2 text-fuji text-xl">
+                        <i class="fa-solid fa-yen-sign"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 text-sm">高速收費</h3>
+                    <p class="text-xs text-gray-500 mt-1">ETC與現金車道</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 天氣 (Weather) ==================== -->
+        <section id="tab-weather" class="tab-content">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 px-1"><i class="fa-solid fa-cloud-sun text-fuji mr-2"></i>沖繩天氣預報</h2>
+            
+            <!-- 大天氣卡片 (顯示旅遊期間概況) -->
+            <div class="bg-gradient-to-br from-fuji-light to-fuji text-white p-6 rounded-3xl shadow-md mb-6 relative overflow-hidden">
+                <i class="fa-solid fa-sun absolute -right-4 -top-4 text-7xl opacity-20"></i>
+                <div class="flex justify-between items-center relative z-10">
+                    <div>
+                        <p class="text-sm opacity-90 mb-1">5/21 抵達首日</p>
+                        <h3 class="text-5xl font-bold font-sans">28°</h3>
+                        <p class="text-sm mt-2 opacity-90">晴時多雲 · 降雨機率 20%</p>
+                    </div>
+                    <div class="text-6xl text-yellow-300 drop-shadow-md">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 旅程天氣列表 -->
+            <div class="bg-white rounded-2xl shadow-soft border border-gray-100 p-4 mb-6">
+                <h3 class="text-sm font-bold text-gray-700 mb-3 border-b border-gray-100 pb-2">旅程預測 (5/21 - 5/27)</h3>
+                <div class="space-y-4">
+                    <!-- Day 1 -->
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="w-16 text-gray-700 font-medium">5/21(四)</span>
+                        <div class="flex items-center w-12 justify-center">
+                            <i class="fa-solid fa-cloud-sun text-yellow-500 text-lg"></i>
+                        </div>
+                        <div class="w-20 text-center text-xs text-gray-500">降雨 20%</div>
+                        <div class="w-24 text-right">
+                            <span class="font-bold text-gray-800">28°</span>
+                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-gray-500">24°</span>
+                        </div>
+                    </div>
+                    <!-- Day 2 -->
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="w-16 text-gray-700 font-medium">5/22(五)</span>
+                        <div class="flex items-center w-12 justify-center">
+                            <i class="fa-solid fa-cloud text-gray-400 text-lg"></i>
+                        </div>
+                        <div class="w-20 text-center text-xs text-gray-500">降雨 30%</div>
+                        <div class="w-24 text-right">
+                            <span class="font-bold text-gray-800">29°</span>
+                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-gray-500">25°</span>
+                        </div>
+                    </div>
+                    <!-- Day 3 -->
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="w-16 text-gray-700 font-medium">5/23(六)</span>
+                        <div class="flex items-center w-12 justify-center">
+                            <i class="fa-solid fa-cloud-showers-heavy text-fuji text-lg"></i>
+                        </div>
+                        <div class="w-20 text-center text-xs text-fuji font-medium">降雨 60%</div>
+                        <div class="w-24 text-right">
+                            <span class="font-bold text-gray-800">27°</span>
+                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-gray-500">24°</span>
+                        </div>
+                    </div>
+                    <!-- Day 4 -->
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="w-16 text-gray-700 font-medium">5/24(日)</span>
+                        <div class="flex items-center w-12 justify-center">
+                            <i class="fa-solid fa-cloud-sun text-yellow-500 text-lg"></i>
+                        </div>
+                        <div class="w-20 text-center text-xs text-gray-500">降雨 20%</div>
+                        <div class="w-24 text-right">
+                            <span class="font-bold text-gray-800">28°</span>
+                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-gray-500">25°</span>
+                        </div>
+                    </div>
+                    <!-- Day 5 -->
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="w-16 text-gray-700 font-medium">5/25(一)</span>
+                        <div class="flex items-center w-12 justify-center">
+                            <i class="fa-solid fa-sun text-red-400 text-lg"></i>
+                        </div>
+                        <div class="w-20 text-center text-xs text-gray-500">降雨 10%</div>
+                        <div class="w-24 text-right">
+                            <span class="font-bold text-gray-800">30°</span>
+                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-gray-500">26°</span>
+                        </div>
+                    </div>
+                    <!-- Day 6 -->
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="w-16 text-gray-700 font-medium">5/26(二)</span>
+                        <div class="flex items-center w-12 justify-center">
+                            <i class="fa-solid fa-cloud-sun text-yellow-500 text-lg"></i>
+                        </div>
+                        <div class="w-20 text-center text-xs text-gray-500">降雨 20%</div>
+                        <div class="w-24 text-right">
+                            <span class="font-bold text-gray-800">29°</span>
+                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-gray-500">25°</span>
+                        </div>
+                    </div>
+                    <!-- Day 7 -->
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="w-16 text-gray-700 font-medium">5/27(三)</span>
+                        <div class="flex items-center w-12 justify-center">
+                            <i class="fa-solid fa-cloud-meatball text-gray-400 text-lg"></i>
+                        </div>
+                        <div class="w-20 text-center text-xs text-gray-500">降雨 40%</div>
+                        <div class="w-24 text-right">
+                            <span class="font-bold text-gray-800">28°</span>
+                            <span class="text-gray-400 mx-1">/</span>
+                            <span class="text-gray-500">24°</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-100 p-4 rounded-2xl shadow-sm">
+                <h4 class="text-sm font-bold text-blue-900 mb-1"><i class="fa-solid fa-circle-info mr-1"></i> 初夏氣候小提醒</h4>
+                <p class="text-xs text-blue-800 leading-relaxed">
+                    5 月下旬的沖繩已經相當溫暖，高溫可達將近 30 度。但由於逐漸進入梅雨季節，天氣變化較快，建議除了準備透氣的夏季衣物、太陽眼鏡與防曬乳外，車上也可隨時備著幾把輕便雨傘以防偶陣雨。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="fixed bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md shadow-float rounded-2xl flex justify-around p-3 z-50 border border-gray-100">
+        <button onclick="switchTab('itinerary')" id="nav-itinerary" class="nav-btn flex flex-col items-center text-fuji transition-colors">
+            <div class="bg-fuji-light/30 w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator">
+                <i class="fa-solid fa-map-location-dot text-lg"></i>
+            </div>
+            <span class="text-[10px] font-bold">行程</span>
+        </button>
+        <button onclick="switchTab('guide')" id="nav-guide" class="nav-btn flex flex-col items-center text-gray-400 hover:text-fuji transition-colors">
+            <div class="w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator">
+                <i class="fa-regular fa-compass text-lg"></i>
+            </div>
+            <span class="text-[10px] font-bold">指南</span>
+        </button>
+        <button onclick="switchTab('weather')" id="nav-weather" class="nav-btn flex flex-col items-center text-gray-400 hover:text-fuji transition-colors">
+            <div class="w-12 h-8 rounded-full flex items-center justify-center mb-1 nav-indicator">
+                <i class="fa-solid fa-cloud-sun text-lg"></i>
+            </div>
+            <span class="text-[10px] font-bold">天氣</span>
+        </button>
+    </nav>
+
+    <script>
+        // 切換主選單 (Tabs)
+        function switchTab(tabId) {
+            // 隱藏所有 tab 內容
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            // 顯示選中的 tab 內容
+            document.getElementById('tab-' + tabId).classList.add('active');
+
+            // 更新底部導覽列樣式
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('text-fuji');
+                btn.classList.add('text-gray-400');
+                btn.querySelector('.nav-indicator').classList.remove('bg-fuji-light/30');
+            });
+
+            const activeBtn = document.getElementById('nav-' + tabId);
+            activeBtn.classList.remove('text-gray-400');
+            activeBtn.classList.add('text-fuji');
+            activeBtn.querySelector('.nav-indicator').classList.add('bg-fuji-light/30');
+        }
+
+        // 切換天數行程 (Days)
+        function switchDay(day) {
+            // 隱藏所有 day 內容
+            document.querySelectorAll('.day-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // 處理如果該天沒有內容的狀況（範例中沒有實作每一天）
+            const targetContent = document.getElementById(`day${day}-content`);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            } else {
+                // 如果沒有資料，顯示一個提示
+                alert(`Day ${day} 的行程尚未安排`);
+                // 保持在當前畫面或切回第一天，這裡簡單處理
+                return;
+            }
+
+            // 更新按鈕樣式
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('bg-fuji', 'text-snow', 'shadow-md');
+                btn.classList.add('bg-white', 'text-gray-500', 'border', 'border-gray-200');
+            });
+
+            const activeBtn = document.getElementById('btn-day' + day);
+            activeBtn.classList.remove('bg-white', 'text-gray-500', 'border', 'border-gray-200');
+            activeBtn.classList.add('bg-fuji', 'text-snow', 'shadow-md');
+            
+            // 將按鈕滾動到可視範圍
+            activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+
+        // 處理照片預覽上傳
+        function previewImage(event, galleryId) {
+            const input = event.target;
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const gallery = document.getElementById(galleryId);
+                    
+                    // 創建預覽圖片元素
+                    const imgContainer = document.createElement('div');
+                    imgContainer.className = 'w-16 h-16 rounded-xl overflow-hidden relative shadow-sm';
+                    
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.className = 'w-full h-full object-cover';
+                    
+                    // 加入刪除按鈕 (簡易版)
+                    const delBtn = document.createElement('div');
+                    delBtn.className = 'absolute top-0 right-0 bg-black/50 text-white w-5 h-5 flex items-center justify-center rounded-bl-lg text-[10px] cursor-pointer';
+                    delBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    delBtn.onclick = function() {
+                        gallery.removeChild(imgContainer);
+                    };
+
+                    imgContainer.appendChild(img);
+                    imgContainer.appendChild(delBtn);
+                    
+                    // 將圖片插入到上傳按鈕之前
+                    gallery.insertBefore(imgContainer, gallery.lastElementChild);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
